@@ -15,7 +15,7 @@ const MobileSlideBar = ({ onClose }) => {
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
         transition={{ duration: 0.3 }}
-        className="fixed top-[70px] right-0 w-[50%] max-w-[220px] h-[calc(100vh-70px)] bg-amber-50 shadow-lg z-50 flex flex-col gap-6 p-6"
+        className="fixed top-[70px] right-0 w-[50%] max-w-[220px] h-[calc(100vh-70px)] bg-amber-50 shadow-lg z-50 flex flex-col gap-6 p-6 lg:hidden"
       >
         {HEADER_DATA.map((link, index) => ( 
           <Link
