@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <nav className="sticky top-0 z-50 bg-amber-50">
-            <div className="flex items-center justify-between px-4 md:px-10 h-[80px]">
+            <div className="flex items-center justify-between px-4 md:px-10 h-[70px]">
 
                 {/* Logo */}
                 <div className="flex items-center gap-2">
@@ -36,14 +36,16 @@ const Header = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex gap-8 xl:gap-12">
+
                     {HEADER_DATA.map((link, index) => (
                         <Link
                             key={index}
                             href={link.link}
                             aria-label={link.ariaLabel}
-                            className="text-sm xl:text-base font-bold text-gray-500 hover:text-primary tracking-[1.8px] uppercase"
+                            className="relative group text-sm xl:text-base font-bold text-gray-500 hover:text-primary tracking-[1.8px] uppercase"
                         >
                             {link.title}
+                            <span className='absolute -bottom-1 left-0 h-px  w-0 group-hover:w-full bg-primary transition-all duration-300'></span>
                         </Link>
                     ))}
                 </div>
@@ -51,13 +53,13 @@ const Header = () => {
                 {/* Desktop Button */}
                 <div className="hidden lg:block">
                     <Button className="px-6 py-3 bg-primary text-white">
-                        Book Now
+                        BOOK NOW
                     </Button>
                 </div>
 
                 {/* Mobile Menu Icon */}
                 <button
-                    className=" text-2xl cursor-pointer hover:text-primary transition-all duration-300 block lg:hidden"
+                    className=" text-2xl cursor-pointer text-primary transition-all duration-300 block lg:hidden"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     {isMenuOpen ? <GiCrossedSwords /> : <RiMenu3Fill />}
