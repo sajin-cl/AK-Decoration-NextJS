@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} ${bodoniModa.variable} h-full antialiased`}
     >
 
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col w-full overflow-x-hidden">
         <Header />
         {children}
       </body>

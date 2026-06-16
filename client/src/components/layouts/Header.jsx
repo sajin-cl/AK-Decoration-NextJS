@@ -16,7 +16,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="sticky top-0 z-50 bg-amber-50">
+        <nav className="sticky top-0 z-50 bg-white shadow-lg">
             <div className="flex items-center justify-between px-4 md:px-10 h-[70px]">
 
                 {/* Logo */}
@@ -42,7 +42,7 @@ const Header = () => {
                             key={index}
                             href={link.link}
                             aria-label={link.ariaLabel}
-                            className="relative group text-sm xl:text-base font-bold text-gray-500 hover:text-primary tracking-[1.8px] uppercase"
+                            className="relative group text-sm xl:text-[12px] font-bold text-gray-500 hover:text-primary tracking-[1.8px] uppercase"
                         >
                             {link.title}
                             <span className='absolute -bottom-1 left-0 h-px  w-0 group-hover:w-full bg-primary transition-all duration-300'></span>
