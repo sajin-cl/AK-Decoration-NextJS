@@ -38,20 +38,20 @@ const HeroSection = () => {
                     Transforming your special moments into unforgettable experiences
                 </p>
                 <div className='flex justify-center items-center gap-4'>
-                    <Button className="px-2 md:px-12 py-3 bg-primary text-white border border-primary">
+                    <Button className="px-12 py-3 bg-primary text-nowrap text-white border border-primary">
                         BOOK NOW
                     </Button>
-                    <Button className="px-2 md:px-12 py-3 bg-transparent text-white border">
+                    <Button className="px-12 py-3 bg-transparent text-nowrap text-white border">
                         VIEW GALLERY
                     </Button>
                 </div>
             </div>
 
             {/* Bottom Arrow */}
-            <span className='absolute bottom-10 left-1/2 -translate-x-1/2 z-40'>
+            <span className='absolute bottom-0 lg:bottom-5 left-1/2 -translate-x-1/2 z-40'>
                 <img src="/down-arrow-Icon.png"
                     aria-hidden="true"
-                    className='h-5 w-4.5 text-white'
+                    className='h-5 w-4.5 text-white animate-bounce'
                 />
             </span>
         </section>
