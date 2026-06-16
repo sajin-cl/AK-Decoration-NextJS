@@ -27,19 +27,34 @@ const WHY_WE_CHOOSE_CARD_DETAILS = [
         icon: '/wallet-Icon.png', title: `Budget-Friendly Packages`,
         desc: `Premium aesthetics tailored to your investment, ensuring maximum visual impact.`
     },
-]
+];
 
 const WhyWeChoose = () => {
     return (
         <section id='why-we-choose' className='relative w-full min-h-screen py-30 px-20 overflow-x-hidden bg-[#FBF9F8]'>
             {/* Top heading */}
             <div className='flex flex-col justify-center items-center w-full mb-10'>
-                <p className='font-mono font-bold text-xs text-primary text-center tracking-wide'>WHY WE CHOOSE</p>
-                <h1 className='font-bodoni text-[32px] text-center font-bold text-[#1B1C1C]'>The Standard of Excellece</h1>
+                <p
+                    className='font-mono font-bold text-xs text-primary text-center tracking-wide'
+                >
+                    WHY WE CHOOSE
+                </p>
+                <h1
+                    className='font-bodoni text-[32px] text-center font-bold text-[#1B1C1C]'
+                >
+                    The Standard of Excellece
+                </h1>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+
+            {/* Card Sections */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center'>
                 {WHY_WE_CHOOSE_CARD_DETAILS.map((card, index) => (
-                    <Card key={index} icon={card.icon} title={card.title} desc={card.desc} />
+                    <Card
+                        key={index}
+                        icon={card.icon}
+                        title={card.title}
+                        desc={card.desc}
+                    />
                 ))}
             </div>
 
@@ -47,4 +62,4 @@ const WhyWeChoose = () => {
     )
 }
 
-export default WhyWeChoose
+export default WhyWeChoose;
