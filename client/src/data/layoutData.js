@@ -8,7 +8,7 @@ export const HEADER_DATA = [
 
 export const FOOTER_DATA = [
     {
-        title: 'Company',
+        title: 'Quick Links',
         links: [
             {
                 title: 'About',
@@ -25,18 +25,22 @@ export const FOOTER_DATA = [
         ]
     },
     {
-        title: 'Legal',
+        title: 'Services',
         links: [
             {
-                title: 'Privacy Policy',
+                title: 'Floral Decor',
                 link: '/privacy-policy'
             },
             {
-                title: 'Terms of Service',
+                title: 'Stage Design',
                 link: '/terms-of-service'
             },
             {
-                title: 'Disclaimer',
+                title: 'Wedding Planning',
+                link: '/disclaimer'
+            },
+            {
+                title: 'Event Lighting',
                 link: '/disclaimer'
             },
         ]

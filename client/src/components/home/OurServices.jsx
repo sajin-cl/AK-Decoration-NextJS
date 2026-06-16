@@ -26,7 +26,7 @@ const OurServices = () => {
             {/* Top heading */}
             <div className='flex flex-col items-start w-full mb-10'>
                 <p
-                    className='font-mono font-bold text-xs text-primary text-center tracking-wide'
+                    className='font-mono font-bold text-xs text-primary  tracking-wide'
                 >
                     OUR SERVICES
                 </p>
