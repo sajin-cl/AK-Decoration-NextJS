@@ -43,7 +43,7 @@ const OurServices = () => {
                     <div
                         key={index}
                         className={cn(`flex flex-col max-w-[352px] bg-white shadow-sm overflow-hidden`,
-                            index === 0 ? 'mt-0 ' : index === 1 ? 'mt-10' : index === 2 ? 'mt-20' : ''
+                            index === 0 ? 'md:mt-0 ' : index === 1 ? 'md:mt-10' : index === 2 ? 'md:mt-20' : ''
                         )}
                     >
                         <Image
