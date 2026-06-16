@@ -5,14 +5,14 @@ const Card = ({ icon, title, desc }) => {
     return (
         <div className='group relative p-6 border-2 border-[#1A1C1B1A] rounded-md overflow-hidden flex flex-col justify-between max-w-[352px] '>
             <div>
-                <div className='relative w-10 h-10 flex items-center justify-start mb-4'>
+                <div className='relative w-10 h-10 flex items-center justify-start mb-4 p-2'>
                     <Image
                         src={icon}
                         alt={title}
-                        height={40}
-                        width={40}
+                        height={25}
+                        width={25}
                         priority
-                        className='object-contain'
+                        className='object-contain '
                     />
                 </div>
 
