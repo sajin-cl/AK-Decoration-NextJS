@@ -67,9 +67,13 @@ const Header = () => {
 
                 <AnimatePresence>
                     {isMenuOpen && (
-                        <MobileSlideBar
-                            onClose={() => setIsMenuOpen(false)}
-                        />
+                        <>
+                            <MobileSlideBar
+                                onClose={() => setIsMenuOpen(false)}
+                            />
+                            
+                        </>
+
                     )}
                 </AnimatePresence>
             </div>

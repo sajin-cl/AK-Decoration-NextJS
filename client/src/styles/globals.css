@@ -15,4 +15,28 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@layer base {
+
+  html,
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: clip;
+    width: 100%;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #111111 inset !important;
+    -webkit-text-fill-color: #d1d5db !important;
+  }
+}
 

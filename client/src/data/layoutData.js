@@ -29,19 +29,19 @@ export const FOOTER_DATA = [
         links: [
             {
                 title: 'Floral Decor',
-                link: '/privacy-policy'
+                link: '/floral-decor'
             },
             {
                 title: 'Stage Design',
-                link: '/terms-of-service'
+                link: '/stage-design'
             },
             {
                 title: 'Wedding Planning',
-                link: '/disclaimer'
+                link: '/wedding-planning'
             },
             {
                 title: 'Event Lighting',
-                link: '/disclaimer'
+                link: '/event-lighting'
             },
         ]
     },

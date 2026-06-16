@@ -7,7 +7,7 @@ const HeroSection = () => {
     return (
         <section id='hero-section' className='relative min-h-screen w-full overflow-hidden'>
             {/* Gradient design top layer*/}
-            <div className='absolute inset-0 bg-black/40 z-10'></div>
+            <div className='absolute inset-0 bg-black/60 z-10'></div>
 
             {/* Background Image */}
             <Image
@@ -29,7 +29,7 @@ const HeroSection = () => {
                     className='mx-auto'
                     priority
                 />
-                <h1 className='text-4xl sm:text-5xl font-bodoni font-bold text-white text-center leading-14 tracking-wide'>
+                <h1 className='text-4xl text-shadow-lg font-bodoni font-bold text-white text-center leading-14 tracking-wide'>
                     WEDDING & FLORAL
                     DECORATIONS IN
                     KANYAKUMARI
