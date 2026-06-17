@@ -6,15 +6,15 @@ import React from 'react'
 
 const SERVICE_DETAILS = [
     {
-        icon: '/floral-decoration.jpg', title: 'Floral Decoration',
+        icon: '/floral-decoration.webp', title: 'Floral Decoration',
         desc: `Artisanal flower arrangements using premium seasonal blooms to create a fragrant, living atmosphere.`
     },
     {
-        icon: '/wedding-decoration.jpg', title: `Wedding Decoration`,
+        icon: '/wedding-decoration.webp', title: `Wedding Decoration`,
         desc: `Comprehensive event styling from entrance to exit, ensuring a cohesive and regal visual narrative.`
     },
     {
-        icon: '/stage-decoration.jpg', title: 'Stage Decoration',
+        icon: '/stage-decoration.webp', title: 'Stage Decoration',
         desc: `Statement stages designed as the perfect backdrop for your most cherished photographs and moments.`
     },
 ];

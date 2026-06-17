@@ -25,7 +25,7 @@ const ShowcaseSection = () => {
                 {/* Image - Only lg and above */}
                 <div className="hidden lg:block w-full h-full relative">
                     <Image
-                        src="/wedding-decoration.jpg"
+                        src="/wedding-decoration.webp"
                         fill
                         alt="Wedding Decoration"
                         sizes="(min-width:1024px) 50vw"

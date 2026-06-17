@@ -47,7 +47,7 @@ const Aboutme = () => {
             <div className='right-side-section order-1 lg:order-2 w-full flex items-center justify-center'>
                 <div className="about-image-container relative w-[460px] h-[550px] shadow-xl ">
                     <Image
-                        src={'/floral-decoration.jpg'}
+                        src={'/floral-decoration.webp'}
                         fill
                         sizes='240'
                         loading='lazy'

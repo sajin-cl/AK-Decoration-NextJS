@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactHero = () => {
     return (
-        <section id='contact-hero-section' className='relative min-h-screen w-full overflow-x-hidden px-20 py-30 flex justify-center items-center'>
+        <section id='contact-hero-section' className='relative  w-full overflow-x-hidden px-20 py-30 flex justify-center items-center'>
             {/* Heading */}
             <div className="flex flex-col items-center w-full mb-5 space-y-4">
                 <p className="font-mono font-bold text-xs text-primary tracking-wide">

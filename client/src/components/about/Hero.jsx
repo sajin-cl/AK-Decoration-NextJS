@@ -9,7 +9,7 @@ const Hero = () => {
 
             {/* Background Image */}
             <Image
-                src={'/about-banner.png'}
+                src={'/about-banner.webp'}
                 fill
                 sizes='100vw'
                 priority

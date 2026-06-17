@@ -11,7 +11,7 @@ const HeroSection = () => {
 
             {/* Background Image */}
             <Image
-                src={'/hero-banner.png'}
+                src={'/hero-banner.webp'}
                 fill
                 sizes='100vw'
                 priority

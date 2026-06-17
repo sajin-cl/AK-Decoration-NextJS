@@ -6,7 +6,7 @@ const Button = ({ children, className, ...props }) => {
     return (
         <button
             className={cn(
-                'relative text-black text-sm hover:cursor-pointer',
+                'relative text-black text-sm hover:cursor-pointer py-3 px-8',
                 className
             )}
             {...props}
