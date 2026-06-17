@@ -1,4 +1,12 @@
 
+export const ADMIN_INFO = {
+    email: 'ajithukumar@gmail.com',
+    phone: '+91 7550305180',
+    projectsCount: '100',
+}
+
+
+
 export const HEADER_DATA = [
     { title: 'Home', ariaLabel: 'Go to Home page', link: '/' },
     { title: 'About', ariaLabel: 'Go to About page', link: '/about' },
@@ -53,12 +61,12 @@ export const FOOTER_DATA = [
                 link: 'https://www.facebook.com/'
             },
             {
-                title: 'Twitter',
-                link: 'https://www.twitter.com/'
+                title: 'Whatsapp',
+                link: 'https://api.whatsapp.com/send/?phone=917550305180&text=Hello+I+need+decoration+service&type=phone_number&app_absent=0'
             },
             {
                 title: 'Instagram',
-                link: 'https://www.instagram.com/'
+                link: 'https://www.instagram.com/ak_decoration_service/?hl=en'
             },
         ]
     }

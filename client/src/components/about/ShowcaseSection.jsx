@@ -1,3 +1,4 @@
+import { ADMIN_INFO } from '@/data/customData';
 import Image from 'next/image'
 import React from 'react'
 
@@ -34,7 +35,7 @@ const ShowcaseSection = () => {
 
                 {/* Card */}
                 <div
-                    className=" w-full max-w-xl bg-white border py-8 px-6 lg:py-[49px] lg:px-[31px] lg:absolute lg:top-10 lg:-right-[410px] space-y-4"
+                    className=" w-full max-w-xl bg-white border border-primary py-8 px-6 lg:py-[49px] lg:px-[31px] lg:absolute lg:top-10 lg:-right-[410px] space-y-4"
                 >
                     {/* Heading */}
                     <div className="flex flex-col items-start w-full mb-5">
@@ -59,7 +60,7 @@ const ShowcaseSection = () => {
                     {/* Counts */}
                     <div className="py-3 flex gap-8">
                         <div>
-                            <span className="font-bodoni text-2xl text-primary">100+</span>
+                            <span className="font-bodoni text-2xl text-primary">{ADMIN_INFO.projectsCount || 100}+</span>
                             <span className="font-bodoni text-xs block">
                                 Projects Completed
                             </span>

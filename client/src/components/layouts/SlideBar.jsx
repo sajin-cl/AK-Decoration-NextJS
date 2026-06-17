@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { HEADER_DATA } from "@/data/layoutData";
+import { HEADER_DATA } from "@/data/customData";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -17,7 +17,7 @@ const MobileSlideBar = ({ onClose }) => {
         transition={{ duration: 0.3 }}
         className="fixed top-[70px] right-0 w-[50%] max-w-[220px] h-[calc(100vh-70px)] bg-white shadow-lg z-50 flex flex-col gap-6 p-6 lg:hidden"
       >
-        {HEADER_DATA.map((link, index) => ( 
+        {HEADER_DATA.map((link, index) => (
           <Link
             key={index}
             href={link.link}

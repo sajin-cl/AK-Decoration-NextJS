@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-import { HEADER_DATA } from '@/data/layoutData'
+import { HEADER_DATA } from '@/data/customData'
 import Image from 'next/image'
 import logo from '../../../public/logo.png'
 import Link from 'next/link'
@@ -16,7 +16,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="sticky top-0 z-50 bg-white shadow-lg">
+        <nav className="sticky top-0 z-50 bg-white shadow-lg border-b border-primary">
             <div className="flex items-center justify-between px-4 md:px-10 h-[70px]">
 
                 {/* Logo */}
@@ -71,7 +71,7 @@ const Header = () => {
                             <MobileSlideBar
                                 onClose={() => setIsMenuOpen(false)}
                             />
-                            
+
                         </>
 
                     )}

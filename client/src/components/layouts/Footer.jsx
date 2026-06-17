@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '@/components/ui/Button'
-import { FOOTER_BOTTOM_DATA, FOOTER_DATA } from "@/data/layoutData"
+import { ADMIN_INFO, FOOTER_BOTTOM_DATA, FOOTER_DATA } from "@/data/customData"
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import Image from 'next/image'
 
@@ -50,12 +50,12 @@ const Footer = () => {
 
                         <span className="flex items-center justify-center lg:justify-start gap-2 text-white/80 font-sans text-sm">
                             <FaPhoneAlt className="text-gray-400" size={15} />
-                            +91 9876543210
+                            {ADMIN_INFO.phone}
                         </span>
 
                         <span className="flex items-center justify-center lg:justify-start gap-2 text-white/80 font-sans text-sm">
                             <FaEnvelope className="text-gray-400" size={15} />
-                            ajithkumar@gmail.com
+                            {ADMIN_INFO.email}
                         </span>
                     </div>
 
@@ -74,6 +74,8 @@ const Footer = () => {
                                 {section.links.map((link, linkIndex) => (
                                     <li key={linkIndex}>
                                         <a
+                                            rel='noopener noreferrer'
+                                            target='_blank'
                                             href={link.link}
                                             className="text-gray-300 text-sm hover:text-white transition-colors duration-300"
                                         >
