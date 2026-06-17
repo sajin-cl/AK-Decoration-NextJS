@@ -21,7 +21,7 @@ const Map = () => {
                 className="w-full h-112.5 md:h-137.5"
                 style={{ border: 0 }}
                 allowFullScreen=""
-                loading="lazy"
+                loading="easy"
                 referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
         </section>
