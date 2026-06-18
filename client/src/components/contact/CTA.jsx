@@ -33,7 +33,7 @@ const CTA = () => {
                 {/* Left Section */}
                 <div className="w-full lg:w-1/2">
 
-                    <h2 className="font-bodoni text-[42px] font-bold text-[#1B1C1C]">
+                    <h2 className="font-bodoni text-[35px] md:text-[42px] font-bold text-[#1B1C1C]">
                         Begin your Journey
                     </h2>
 
@@ -117,7 +117,7 @@ const CTA = () => {
                                     className="mb-4"
                                 />
 
-                                <h3 className="font-bodoni text-[28px] font-bold text-primary mb-2">
+                                <h3 className="font-bodoni text-[20px] font-bold text-primary mb-2">
                                     {item.title}
                                 </h3>
 
@@ -136,7 +136,7 @@ const CTA = () => {
                                 className="mb-4"
                             />
 
-                            <h3 className="font-bodoni text-[28px] font-bold text-primary mb-4">
+                            <h3 className="font-bodoni text-[20px] font-bold text-primary mb-4">
                                 Social Connection
                             </h3>
 

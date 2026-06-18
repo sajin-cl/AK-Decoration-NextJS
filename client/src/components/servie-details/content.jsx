@@ -7,7 +7,7 @@ const Content = ({ data }) => {
     const { title, subtitle, image, description } = data
 
     return (
-        <section id='service-detail-content' className='relative w-full min-h-screen overflow-x-hidden bg-[#FBF9F8] px-20 py-30 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
+        <section id='service-detail-content' className='relative w-full min-h-screen overflow-x-hidden bg-[#FBF9F8] px-10 md:px-20 py-30 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
 
             {/*  Left Para Section */}
             <div className='left-side-section  order-2 lg:order-1 justify-self-center'>

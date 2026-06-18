@@ -31,7 +31,7 @@ const WHY_WE_CHOOSE_CARD_DETAILS = [
 
 const WhyWeChoose = () => {
     return (
-        <section id='why-we-choose' className='relative w-full min-h-screen py-30 px-20 overflow-x-hidden bg-[#FBF9F8]'>
+        <section id='why-we-choose' className='relative w-full min-h-screen py-30 px-10 md:px-20 overflow-x-hidden bg-[#FBF9F8]'>
             {/* Top heading */}
             <div className='flex flex-col justify-center items-center w-full mb-10'>
                 <p

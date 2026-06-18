@@ -37,7 +37,7 @@ const LIST = [
 
 const ServiceList = () => {
     return (
-        <section id='service-list' className='relative w-full  overflow-x-hidden px-20 pb-30 bg-white space-y-20'>
+        <section id='service-list' className='relative w-full  overflow-x-hidden px-10 md:px-20 pb-30 bg-white space-y-20'>
 
             {LIST.map((service) => (
                 <div key={service?.id} className="service-container grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-20 items-center overflow-hidden">
@@ -54,7 +54,7 @@ const ServiceList = () => {
                     </div>
 
                     {/* Image Info Section */}
-                    <div className={cn('image-info-section space-y-3', service?.id % 2 === 0 ? 'lg:order-1' : 'lg:order-2')}>
+                    <div className={cn('image-info-section space-y-2 md:space-y-3', service?.id % 2 === 0 ? 'lg:order-1' : 'lg:order-2')}>
                         {/* Top heading */}
                         <div>
                             <p
@@ -79,7 +79,7 @@ const ServiceList = () => {
                             ))}
                         </ul>
 
-                        <div className='mt-15'>
+                        <div className='mt-5'>
                             <Link href={service?.goTo} className='text-primary underline underline-offset-2 text-xs font-bold'>
                                 {service?.explore}
                             </Link>

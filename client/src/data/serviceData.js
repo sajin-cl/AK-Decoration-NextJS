@@ -23,7 +23,7 @@ const SERVICES_DATA = {
             ],
         },
 
-        gallery: {
+        highlights: {
             subtitle: "VISUAL JOURNAL",
             title: "Selected Installations",
             description:
@@ -51,7 +51,7 @@ const SERVICES_DATA = {
 
     "wedding-decoration": {
         banner: {
-            title: "Luxury Wedding Decoration",
+            title: "Wedding Decoration",
             subtitle: "GRAND EVENT PRODUCTION",
             description: "Creating unforgettable wedding experiences.",
             image: "/wedding/wedding-banner.webp",
@@ -67,7 +67,7 @@ const SERVICES_DATA = {
             ],
         },
 
-        gallery: {
+        highlights: {
             subtitle: "PORTFOLIO",
             title: "Wedding Highlights",
             description: "A showcase of our finest wedding projects.",
@@ -109,7 +109,7 @@ const SERVICES_DATA = {
             ],
         },
 
-        gallery: {
+        highlights: {
             subtitle: "PORTFOLIO",
             title: "Floral Highlights",
             description: `A curated selection of our most ambitious Indian luxury floral commissions.`,

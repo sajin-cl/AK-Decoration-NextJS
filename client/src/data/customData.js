@@ -1,8 +1,9 @@
 
 export const ADMIN_INFO = {
-    email: 'ajithukumar@gmail.com',
+    email: 'sajincl222@gmail.com',
     phone: '+91 7550305180',
     projectsCount: '100',
+    
 }
 
 

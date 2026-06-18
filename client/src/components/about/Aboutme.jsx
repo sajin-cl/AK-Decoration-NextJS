@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 const content = [
@@ -9,7 +10,7 @@ const content = [
 
 const Aboutme = () => {
     return (
-        <section id='about-me' className='relative w-full min-h-screen overflow-x-hidden bg-[#FBF9F8] px-20 py-30 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
+        <section id='about-me' className='relative w-full min-h-screen overflow-x-hidden bg-[#FBF9F8] px-10 md:px-20 py-30 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
              {/* Gradient design top layer*/}
             <div className='absolute top-0 left-0 w-full h-48 bg-linear-to-b from-white via-white/70 to-transparent z-40'></div>
 
@@ -39,7 +40,7 @@ const Aboutme = () => {
                     </p>))}
                 </div>
 
-                <span className='inline-block mt-5 text-sm text-primary underline underline-offset-2'>EXPLORE OUR PROCESS</span>
+                <Link href={'/service'} className='inline-block mt-5 text-sm text-primary underline underline-offset-2 cursor-pointer'>EXPLORE OUR PROCESS</Link>
 
             </div>
 
@@ -52,7 +53,7 @@ const Aboutme = () => {
                         sizes='240'
                         loading='lazy'
                         alt='About image'
-                        className='object-cover'
+                        className='object-cover rounded-t-xl md:rounded-none'
                     />
                     <div className="absolute -bottom-5 -left-5 w-20 h-20 bg-gray-400">
                         <Image

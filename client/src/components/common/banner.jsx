@@ -3,13 +3,13 @@ import React from 'react'
 
 
 const BANNER_INFO = {
-    "about":{
+    "about": {
         subtitle: "LEGACY OF CRAFTSMANSHIP",
         title: "Our Heritage of Elegance",
         description: "AK Decoration is the premier architect of luxury events in Kanyakumari. We transform spaces into breathtaking narratives, where heritage meets contemporary finesse to create memories that endure beyond time.",
         image: "/about-banner.webp"
     },
-    "gallery":{ 
+    "gallery": {
         subtitle: "LEGACY OF CRAFTSMANSHIP",
         title: "Our Heritage of Elegance",
         description: "AK Decoration is the premier architect of luxury events in Kanyakumari. We transform spaces into breathtaking narratives, where heritage meets contemporary finesse to create memories that endure beyond time.",
@@ -17,7 +17,7 @@ const BANNER_INFO = {
     }
 }
 
-const Banner = ({subtitle, title, description, image}) => {
+const Banner = ({ subtitle, title, description, image }) => {
     return (
         <section className='relative min-h-screen w-full overflow-x-hidden'>
             {/* Gradient design top layer*/}
@@ -34,12 +34,16 @@ const Banner = ({subtitle, title, description, image}) => {
             />
 
             {/* Hero section absolute contents */}
-            <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 space-y-4'>
-                <p className='text-amber-200 text-center font-medium text-xl tracking-wide'>{subtitle}</p>
-                <h1 className='text-4xl text-shadow-lg font-bodoni font-bold text-white text-center leading-14 tracking-wide'>
+            <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 space-y-4 w-full max-w-5xl px-5'>
+                <p className='text-amber-200 text-center font-medium text-xl tracking-wide'>
+                    {subtitle}
+                </p>
+
+                <h1 className='text-2xl md:text-4xl text-shadow-lg font-bodoni font-bold text-white text-center leading-7 md:leading-14 tracking-wide'>
                     {title}
                 </h1>
-                <p className='text-lg md:text-[16px] font-sans font-semibold text-center text-shadow-sm font-popins text-gray-100'>
+
+                <p className='text-base md:text-[16px] font-semibold text-center text-shadow-sm font-popins text-gray-100 max-w-3xl mx-auto'>
                     {description}
                 </p>
             </div>

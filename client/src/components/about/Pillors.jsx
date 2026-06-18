@@ -19,7 +19,7 @@ const PILLORS = [
 
 const Pillors = () => {
     return (
-        <section id='about-pillors' className='w-full relative overflow-x-hidden px-20 py-30 bg-white'>
+        <section id='about-pillors' className='w-full relative overflow-x-hidden px-10 md:px-20 py-30 bg-white'>
             <div className='flex items-center justify-center '>
                 <h1 className='font-bodoni text-[32px] font-bold  text-[#1B1C1C]'>The Pillars of Our Craft</h1>
             </div>

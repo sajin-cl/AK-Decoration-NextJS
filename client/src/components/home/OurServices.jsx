@@ -22,7 +22,7 @@ const SERVICE_DETAILS = [
 const OurServices = () => {
 
     return (
-        <section id='our-services' className='relative min-h-screen w-full px-20 py-30 overflow-x-hidden bg-[#F5F3F3]'>
+        <section id='our-services' className='relative min-h-screen w-full px-10 md:px-20 py-30 overflow-x-hidden bg-[#F5F3F3]'>
             {/* Top heading */}
             <div className='flex flex-col items-start w-full mb-10'>
                 <p

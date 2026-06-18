@@ -1,6 +1,10 @@
+"use client"
+
+import { useRouter } from 'next/navigation';
 import Image from 'next/image'
 import React from 'react'
 import Button from '../ui/Button';
+
 
 
 const PORTFOLIO_IMAGES = [
@@ -11,6 +15,9 @@ const PORTFOLIO_IMAGES = [
 ]
 
 const Portfolio = () => {
+   
+    const router = useRouter()
+
     return (
         <section id='portfolio' className='w-full min-h-screen relative bg-[#FBF9F8] overflow-x-hidden px-6 md:px-20 py-20'>
             {/* Top heading */}
@@ -76,7 +83,9 @@ const Portfolio = () => {
 
             </div>
             <div className='btn-section flex justify-center mt-6'>
-                <Button className="px-12 py-3 bg-transparent text-nowrap text-primary border border-primary">
+                <Button
+                    onClick={() => router.push('/gallery')}
+                    className="px-12 py-3 bg-transparent text-nowrap text-primary border border-primary">
                     EXPLORE FULL GALERY
                 </Button>
             </div>

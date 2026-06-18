@@ -1,16 +1,23 @@
+"use client";
+
 import React from 'react'
 import Button from '@/components/ui/Button'
 import { ADMIN_INFO, FOOTER_BOTTOM_DATA, FOOTER_DATA } from "@/data/customData"
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import Image from 'next/image'
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const Footer = () => {
+
+    const router = useRouter();
+
     return (
-        <footer className="relative w-full bg-[#303031] pt-20 lg:pt-30 px-5 sm:px-8 lg:px-20 overflow-x-hidden">
+        <footer className="relative w-full bg-[#303031] pt-20 lg:pt-30 px-5  lg:px-20 overflow-x-hidden">
 
             {/* Footer Top Section */}
             <div className="flex flex-col items-center gap-4 border-b border-gray-600 pb-10 text-center">
-                <h1 className="font-bodoni text-3xl lg:text-5xl text-gray-200">
+                <h1 className="font-bodoni text-2xl lg:text-5xl text-gray-200">
                     Ready To Design Your Life?
                 </h1>
 
@@ -18,7 +25,7 @@ const Footer = () => {
                     Book a consultation today and let's design an event that tells your unique story with elegance and grandeur.
                 </p>
 
-                <Button className="px-8 lg:px-12 py-3 bg-primary text-white border border-primary">
+                <Button onClick={() => router.push('/contact')} className="px-8 lg:px-12 py-3 bg-primary text-white border border-primary">
                     BOOK NOW
                 </Button>
             </div>
@@ -92,7 +99,15 @@ const Footer = () => {
 
             {/* Footer Copyright */}
             <div className="text-center text-gray-400 font-sans text-xs py-4">
-                {FOOTER_BOTTOM_DATA.copyright}
+                © {new Date().getFullYear()} AK Decoration. Developed by {" "}
+                <Link
+                    href="https://sajin-cl.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-primary transition-colors"
+                >
+                    sajin-cl
+                </Link>
             </div>
 
         </footer>

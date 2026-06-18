@@ -1,4 +1,5 @@
 import Banner from '@/components/common/banner';
+import GallerySection from '@/components/gallery/GallerySection';
 
 
 const content = {
@@ -13,6 +14,7 @@ const GalleryPage = () => {
     return (
         <>
             <Banner {...content} />
+            <GallerySection />
         </>
     )
 }

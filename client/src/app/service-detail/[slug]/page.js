@@ -1,7 +1,7 @@
+import OurProcess from '@/components/common/OurProcess';
 import Banner from '@/components/servie-details/banner';
 import Content from '@/components/servie-details/content';
-import Gallery from '@/components/servie-details/gallery';
-import OurProcess from '@/components/servie-details/our-process';
+import Highlights from '@/components/servie-details/highlights';
 import SERVICES_DATA from '@/data/serviceData';
 import { notFound } from 'next/navigation';
 import React from 'react'
@@ -21,7 +21,7 @@ const ServiceDetailPage = async ({ params }) => {
             <Banner data={service?.banner} />
             <Content data={service?.content} />
             <OurProcess />
-            <Gallery data={service?.gallery} />
+            <Highlights data={service?.highlights} />
         </>
     )
 }

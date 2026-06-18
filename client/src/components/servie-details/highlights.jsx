@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 
-const Gallery = ({ data }) => {
+const Highlights = ({ data }) => {
 
   const { title, subtitle, description, images } = data;
 
   return (
     <section
       id="service-detail-gallery"
-      className="relative w-full bg-white py-30 px-20 overflow-x-hidden min-h-screen"
+      className="relative w-full bg-white py-30 px-10 md:px-20 overflow-x-hidden min-h-screen"
     >
       {/* Heading */}
       <div className="flex flex-col md:flex-row justify-between gap-8 mb-16">
@@ -32,7 +32,7 @@ const Gallery = ({ data }) => {
         {images.map((image) => (
           <div
             key={image?.id}
-            className={`relative overflow-hidden`}
+            className={`relative overflow-hidden rounded-2xl`}
           >
             <Image
               src={image?.src}
@@ -48,4 +48,4 @@ const Gallery = ({ data }) => {
   );
 };
 
-export default Gallery;
+export default Highlights;

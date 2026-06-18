@@ -2,9 +2,9 @@ import React from 'react'
 
 const Intro = () => {
     return (
-        <section id='service-intro' className='relative w-full overflow-x-hidden px-20 py-30'>
+        <section id='service-intro' className='relative w-full overflow-x-hidden px-10 md:px-20 py-30'>
             {/* Heading */}
-            <div className="flex flex-col  w-full mb-5 space-y-4">
+            <div className="flex flex-col  w-full  space-y-4">
 
                 <h1 className="font-bodoni text-2xl lg:text-[32px] font-bold text-[#1B1C1C]">
                     Event Services

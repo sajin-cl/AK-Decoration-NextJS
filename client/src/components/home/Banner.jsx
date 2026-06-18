@@ -3,7 +3,7 @@ import Image from 'next/image';
 import logo from '../../../public/logo.png'
 import Button from '../ui/Button';
 
-const HeroSection = () => {
+const Banner = () => {
     return (
         <section id='hero-section' className='relative min-h-screen w-full overflow-hidden'>
             {/* Gradient design top layer*/}
@@ -37,11 +37,11 @@ const HeroSection = () => {
                 <p className='text-lg md:text-[18px] font-geist-sans text-center font-popins text-gray-200'>
                     Transforming your special moments into unforgettable experiences
                 </p>
-                <div className='flex justify-center items-center gap-4'>
-                    <Button className="px-12 py-3 bg-primary text-nowrap text-white border border-primary">
+                <div className='flex justify-center items-center gap-2 md:gap-4'>
+                    <Button className="px-10 md:px-12 py-3 bg-primary text-nowrap text-white border border-primary">
                         BOOK NOW
                     </Button>
-                    <Button className="px-12 py-3 bg-transparent text-nowrap text-white border">
+                    <Button className="px-10 md:px-12 py-3 bg-transparent text-nowrap text-white border">
                         VIEW GALLERY
                     </Button>
                 </div>
@@ -58,4 +58,4 @@ const HeroSection = () => {
     )
 }
 
-export default HeroSection;
+export default Banner;
