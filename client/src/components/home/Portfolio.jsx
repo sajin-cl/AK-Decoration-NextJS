@@ -4,10 +4,10 @@ import Button from '../ui/Button';
 
 
 const PORTFOLIO_IMAGES = [
-    "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/4_lwch6p.webp",
-    "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/5_mmggm6.webp",
-    "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/3_kewmnw.webp",
-    "https://res.cloudinary.com/dpc9p1npw/image/upload/q_auto,f_auto/1_rywqnx.webp",
+    `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/4_lwch6p.webp`,
+    `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/5_mmggm6.webp`,
+    `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/3_kewmnw.webp`,
+    `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/1_rywqnx.webp`,
 ]
 
 const Portfolio = () => {

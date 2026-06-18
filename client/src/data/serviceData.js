@@ -13,7 +13,7 @@ const SERVICES_DATA = {
             subtitle: "SINCE INCEPTION",
             title: "Curating the Extraordinary",
             image:
-                "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/stage-decor-service-content_u6nwuw.webp",
+                `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/stage-decor-service-content_u6nwuw.webp`,
             description: [
                 "Founded on the principles of precision and theatrical beauty, AK Decoration has evolved from a local floral studio into Kanyakumari's most sought-after event curation house.",
 
@@ -32,17 +32,17 @@ const SERVICES_DATA = {
             images: [
                 {
                     id: 1,
-                    src: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/stage1_utj8wh.webp",
+                    src: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/stage1_utj8wh.webp`,
                     alt: "Installation 1",
                 },
                 {
                     id: 2,
-                    src: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/stage2_aq5cyg.webp",
+                    src: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/stage2_aq5cyg.webp`,
                     alt: "Installation 2",
                 },
                 {
                     id: 3,
-                    src: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/stage3_rghadk.webp",
+                    src: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/stage3_rghadk.webp`,
                     alt: "Installation 3",
                 },
             ],
@@ -60,7 +60,7 @@ const SERVICES_DATA = {
         content: {
             subtitle: "THE MASTERY",
             title: "Large-Scale Event Production",
-            image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/wedding-preview_qzhldq.webp",
+            image: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/wedding-preview_qzhldq.webp`,
             description: [
                 `We specialize in transforming vast spaces into intimate, ethereal landscapes. Our production team manages every technical and artistic detail of high-occupancy luxury celebrations, ensuring grandeur never compromises the warmth of the union.`,
                 `From suspended floral architectures to complex light scapes, we engineer moments that resonate with the scale of your legacy.`
@@ -75,17 +75,17 @@ const SERVICES_DATA = {
             images: [
                 {
                     id: 1,
-                    src: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/wed1_yv7bd1.webp",
+                    src: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/wed1_yv7bd1.webp`,
                     alt: "Wedding 1",
                 },
                 {
                     id: 2,
-                    src: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/wed2_l5ifeo.webp",
+                    src: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/wed2_l5ifeo.webp`,
                     alt: "Wedding 2",
                 },
                 {
                     id: 3,
-                    src: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/wed3_bwvqxf.webp",
+                    src: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/wed3_bwvqxf.webp`,
                     alt: "Wedding 3",
                 },
             ],
@@ -102,7 +102,7 @@ const SERVICES_DATA = {
         content: {
             subtitle: "OUR HERITAGE",
             title: "The Craft of Sacred Blooms",
-            image: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/floral-preview_irxetv.webp",
+            image: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/floral-preview_irxetv.webp`,
             description: [
                 `At AK Decoration, we redefine luxury through the lens of traditional Indian botanical artistry. We treat cascading jasmine strings and vibrant marigold garlands not just as decor, but as structural elements that honor centuries of cultural heritage.`,
                 `Our approach blends royal grandiosity with contemporary minimalism. We source heritage blooms and rare exotic species to craft living installations that evoke the sensory richness of a palace garden, ensuring every event is a fleeting, aromatic masterpiece.`
@@ -117,17 +117,17 @@ const SERVICES_DATA = {
             images: [
                 {
                     id: 1,
-                    src: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/floral1_yr2xul.webp",
+                    src: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/floral1_yr2xul.webp`,
                     alt: "Floral 1",
                 },
                 {
                     id: 2,
-                    src: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/floral2_gqlxvq.webp",
+                    src: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/floral2_gqlxvq.webp`,
                     alt: "Floral 2",
                 },
                 {
                     id: 3,
-                    src: "https://res.cloudinary.com/dpc9p1npw/image/upload/f_auto,q_auto/floral3_bn8gqa.webp",
+                    src: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/floral3_bn8gqa.webp`,
                     alt: "Floral 3",
                 },
             ],

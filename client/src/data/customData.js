@@ -37,19 +37,19 @@ export const FOOTER_DATA = [
         links: [
             {
                 title: 'Floral Decor',
-                link: '/floral-decor'
+                link: '/service-detail/floral-decoration'
             },
             {
                 title: 'Stage Design',
-                link: '/stage-design'
+                link: '/service-detail/stage-decoration'
             },
             {
                 title: 'Wedding Planning',
-                link: '/wedding-planning'
+                link: '/service-detail/wedding-decoration'
             },
             {
                 title: 'Event Lighting',
-                link: '/event-lighting'
+                link: '/service-detail/floral-decoration'
             },
         ]
     },
