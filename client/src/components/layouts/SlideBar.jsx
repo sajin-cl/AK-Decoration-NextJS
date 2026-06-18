@@ -15,18 +15,25 @@ const MobileSlideBar = ({ onClose }) => {
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
         transition={{ duration: 0.3 }}
-        className="fixed top-[70px] right-0 w-[50%] max-w-[220px] h-[calc(100vh-70px)] bg-white shadow-lg z-50 flex flex-col gap-6 p-6 lg:hidden"
+        className="fixed top-[70px] right-0 w-[50%] max-w-[220px] h-[calc(100vh-70px)] bg-white/70 shadow-lg z-50 flex flex-col gap-4 p-6 lg:hidden"
       >
         {HEADER_DATA.map((link, index) => (
           <Link
             key={index}
-            href={link.link}
+            href={link.link} 
             onClick={onClose}
             className="text-sm font-bold text-gray-500 hover:text-primary hover:ml-2 tracking-[1.8px] uppercase"
           >
             {link.title}
           </Link>
         ))}
+        <Link
+          href="/contact"
+          onClick={onClose}
+          className="text-sm font-bold text-gray-500 hover:text-primary hover:ml-2 tracking-[1.8px] uppercase"
+        >
+          Contact
+        </Link>
       </motion.div>
     </>
   );

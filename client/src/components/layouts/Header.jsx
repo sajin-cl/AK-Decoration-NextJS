@@ -10,10 +10,15 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { GiCrossedSwords } from "react-icons/gi";
 import MobileSlideBar from './SlideBar'
 import { AnimatePresence } from 'framer-motion'
+import { usePathname, useRouter } from 'next/navigation'
+import { cn } from '@/lib/utils'
 
 const Header = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const router = useRouter();
+    const pathName = usePathname();
 
     return (
         <nav className="sticky top-0 z-50 bg-white shadow-lg border-b border-primary">
@@ -35,24 +40,35 @@ const Header = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden lg:flex gap-8 xl:gap-12">
+                <div className="hidden lg:flex gap-8 xl:gap-10">
 
-                    {HEADER_DATA.map((link, index) => (
-                        <Link
-                            key={index}
-                            href={link.link}
-                            aria-label={link.ariaLabel}
-                            className="relative group text-sm xl:text-[12px] font-bold text-gray-500 hover:text-primary tracking-[1.8px] uppercase"
-                        >
-                            {link.title}
-                            <span className='absolute -bottom-1 left-0 h-px  w-0 group-hover:w-full bg-primary transition-all duration-300'></span>
-                        </Link>
-                    ))}
+                    {HEADER_DATA.map((link, index) => {
+                        const isActive = pathName === link.link;
+
+                        return (
+                            <Link
+                                key={index}
+                                href={link.link}
+                                aria-label={link.ariaLabel}
+                                className={cn('relative group text-xs font-bold  tracking-[1.8px] uppercase',
+                                    isActive ? 'text-primary' : 'text-gray-500 hover:text-primary'
+                                )}
+                            >
+                                {link.title}
+                                <span className={cn('absolute -bottom-1 left-0 h-px  w-0 group-hover:w-full bg-primary transition-all duration-300',
+                                    isActive ? 'w-full' : 'w-0 group-hover:w-full')}></span>
+                            </Link>
+                        )
+
+                    })}
                 </div>
 
                 {/* Desktop Button */}
                 <div className="hidden lg:block">
-                    <Button className="px-6 py-3 bg-primary text-white">
+                    <Button
+                        onClick={() => router.push('/contact')}
+                        className="px-6 py-3 bg-primary text-white"
+                    >
                         BOOK NOW
                     </Button>
                 </div>

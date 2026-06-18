@@ -1,20 +1,21 @@
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 
 
 const SERVICE_DETAILS = [
     {
-        icon: '/floral-decoration.webp', title: 'Floral Decoration',
+        icon: '/floral-decoration.webp', title: 'Floral Decoration', link:'/service-detail/floral-decoration',
         desc: `Artisanal flower arrangements using premium seasonal blooms to create a fragrant, living atmosphere.`
     },
     {
-        icon: '/wedding-decoration.webp', title: `Wedding Decoration`,
+        icon: '/wedding-decoration.webp', title: `Wedding Decoration`,link:'/service-detail/wedding-decoration',
         desc: `Comprehensive event styling from entrance to exit, ensuring a cohesive and regal visual narrative.`
     },
     {
-        icon: '/stage-decoration.webp', title: 'Stage Decoration',
+        icon: '/stage-decoration.webp', title: 'Stage Decoration',link:'/service-detail/stage-decoration',
         desc: `Statement stages designed as the perfect backdrop for your most cherished photographs and moments.`
     },
 ];
@@ -47,8 +48,8 @@ const OurServices = () => {
                         )}
                     >
                         <Image
-                            src={service.icon}
-                            alt={service.title}
+                            src={service?.icon}
+                            alt={service?.title}
                             width={352}
                             height={528}
                             className="w-full h-[450px] object-cover"
@@ -56,16 +57,17 @@ const OurServices = () => {
 
                         <div className="p-6 border-b border-gray-100">
                             <h2 className="font-bodoni text-2xl font-bold mb-3">
-                                {service.title}
+                                {service?.title}
                             </h2>
 
                             <p className="text-gray-600 mb-4">
-                                {service.desc}
+                                {service?.desc}
                             </p>
 
-                            <span className="text-primary font-semibold cursor-pointer">
+                            <Link href={service?.link}
+                             className="text-primary font-semibold cursor-pointer">
                                 Learn More →
-                            </span>
+                            </Link>
                         </div>
                     </div>
                 ))}

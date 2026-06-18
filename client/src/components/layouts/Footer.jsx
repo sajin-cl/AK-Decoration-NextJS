@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Button from '@/components/ui/Button'
-import { ADMIN_INFO, FOOTER_BOTTOM_DATA, FOOTER_DATA } from "@/data/customData"
+import { ADMIN_INFO, FOOTER_DATA } from "@/data/customData"
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';

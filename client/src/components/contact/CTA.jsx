@@ -1,8 +1,13 @@
+"use client"
+
 import React from 'react';
 import Button from '@/components/ui/Button';
 import Image from 'next/image';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { useState, useRef } from 'react';
 import { ADMIN_INFO } from '@/data/customData';
+import Link from 'next/link';
+import { toast } from 'react-toastify';
 
 const CONTACT_INFO = [
     {
@@ -20,9 +25,104 @@ const CONTACT_INFO = [
         title: 'General Inquiries',
         desc: `${ADMIN_INFO.email} \n For collaborations and careers.`
     }
-]
+];
+
 
 const CTA = () => {
+
+    const [errors, setErrors] = useState({});
+    const [loading, setLoading] = useState(false);
+
+    const formRef = useRef(null);
+
+    const [formData, setFormData] = useState({
+        fullName: '',
+        phoneNo: '',
+        eventType: '',
+        eventDate: '',
+        message: ''
+    });
+
+
+    const handleChange = (e) => {
+
+        const { name, value } = e.target;
+
+        setFormData((prev => ({
+            ...prev,
+            [name]: value,
+        })));
+
+        setErrors((prev => {
+            const updated = { ...prev };
+            delete updated[name];
+            return updated;
+        }));
+    };
+
+
+
+    /* --- Form Validation --- */
+
+    const validateForm = () => {
+        const newErrors = {};
+
+        if (!formData.fullName.trim()) newErrors.fullName = "Name is required";
+        if (!formData.eventType) newErrors.eventType = "Event type is required";
+        if (!formData.phoneNo) newErrors.phoneNo = "Phone no is required";
+        if (!formData.eventDate) newErrors.eventDate = "Event date is required";
+        if (!formData.message.trim()) newErrors.message = "Message is required";
+
+        return newErrors;
+    };
+
+
+    /* --- Form Submition (using formsubmit.co)--- */
+
+    const submitForm = async (e) => {
+        e.preventDefault();
+
+        const validationErrors = validateForm();
+
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors)
+            return;
+        }
+
+        setLoading(true);
+
+        const formDataToSend = new FormData(formRef.current);
+        formDataToSend.append("_captcha", "false");
+        formDataToSend.append("_template", "table");
+        formDataToSend.append("_subject", "Decoration Event Inquiry : AK DECORATION");
+
+        try {
+            const res = await fetch(
+                `https://formsubmit.co/${process.env.NEXT_PUBLIC_FORMSUBMIT_TOKEN}`,
+                {
+                    method: "POST",
+                    body: formDataToSend,
+                }
+            );
+
+            if (res.ok) {
+                formRef.current.reset();
+
+                setFormData({ fullName: '', phoneNo: '', eventType: '', eventDate: '', message: '' });
+
+                toast.success("Inquiry submitted successfully!");
+            }
+        }
+        catch (err) {
+            console.error(err);
+        }
+        finally {
+            setLoading(false);
+        }
+    };
+
+
+
     return (
         <section
             id="cta-section"
@@ -39,67 +139,142 @@ const CTA = () => {
 
                     <span className="inline-block w-14 h-[2px] bg-primary mt-2 mb-10"></span>
 
-                    <form>
+                    {/*  Form Starting Point */}
+                    <form ref={formRef} onSubmit={submitForm}>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-
+                            {/*1.Name Field*/}
                             <div>
-                                <label className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2">
+                                <label htmlFor='full-name' className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2">
                                     Full Name
                                 </label>
 
                                 <input
+                                    name='fullName'
+                                    id='full-name'
                                     type="text"
+                                    value={formData.fullName}
+                                    onChange={handleChange}
                                     placeholder="Enter your full name"
                                     className="w-full border-b border-gray-300 pb-3 text-sm outline-none"
                                 />
+                                {errors?.fullName && (
+                                    <p className="text-red-500 text-xs mt-1">
+                                        {errors.fullName}
+                                    </p>
+                                )}
                             </div>
-
+                            {/*2.Event Type Field*/}
                             <div>
-                                <label className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2">
+                                <label htmlFor='event-type'
+                                    className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2"
+                                >
                                     Event Type
                                 </label>
 
-                                <select name="" id="category" className="border-b-1 w-full border-gray-400 border-0 focus:outline-none pb-3">
+                                <select name="eventType"
+                                    id="event-type"
+                                    value={formData.eventType}
+                                    onChange={handleChange}
+                                    className="border-b-1 w-full border-gray-400 border-0 focus:outline-none pb-3"
+                                >
                                     <option value="">Select</option>
-                                    <option value="">Wedding</option>
-                                    <option value="">Reception</option>
-                                    <option value="">Birthday</option>
-                                    <option value="">Corporate Event</option>
-                                    <option value="">Other</option>
+                                    <option value="Wedding">Wedding</option>
+                                    <option value="Reception">Reception</option>
+                                    <option value="Birthday">Birthday</option>
+                                    <option value="Corporate">Corporate Event</option>
+                                    <option value="Other">Other</option>
                                 </select>
+                                {errors?.eventType && (
+                                    <p className="text-red-500 text-xs mt-1">
+                                        {errors.eventType}
+                                    </p>
+                                )}
                             </div>
-
                         </div>
 
+                        {/*3.Phone number Field */}
+                        <div className='mb-8'>
+                            <label
+                                htmlFor='phone-no'
+                                className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2">
+                                Phone number
+                            </label>
+
+                            <input
+                                type="text"
+                                id='phone-no'
+                                name='phoneNo'
+                                placeholder="Enter your phone number"
+                                value={formData.phoneNo}
+                                onChange={handleChange}
+                                className="w-full border-b border-gray-300 pb-3 text-sm outline-none"
+                            />
+                            {errors?.phoneNo && (
+                                <p className="text-red-500 text-xs mt-1">
+                                    {errors.phoneNo}
+                                </p>
+                            )}
+                        </div>
+
+                        {/*4.Event Date Field*/}
                         <div className="mb-8">
-                            <label className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2">
+                            <label
+                                htmlFor='event-date'
+                                className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2"
+                            >
                                 Date of Event
                             </label>
 
                             <input
+                                id='event-date'
+                                name='eventDate'
                                 type="date"
+                                value={formData.eventDate}
+                                onChange={handleChange}
                                 className="w-full border-b border-gray-300 pb-3 text-sm outline-none"
                             />
+                            {errors?.eventDate && (
+                                <p className="text-red-500 text-xs mt-1">
+                                    {errors.eventDate}
+                                </p>
+                            )}
                         </div>
-
+                        {/*5.Message Field*/}
                         <div className="mb-10">
-                            <label className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2">
+                            <label
+                                htmlFor='message'
+                                className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2"
+                            >
                                 Your Message
                             </label>
 
                             <textarea
+                                id='message'
+                                name='message'
                                 rows={1}
                                 placeholder="Describe your idea for the event..."
+                                value={formData.message}
+                                onChange={handleChange}
                                 className="w-full border-b border-gray-300 pb-3 text-sm outline-none resize-none"
                             />
+                            {errors?.message && (
+                                <p className="text-red-500 text-xs mt-1">
+                                    {errors.message}
+                                </p>
+                            )}
                         </div>
-
-                        <Button className="px-10 py-3 bg-black text-white">
-                            SEND INQUIRY
+                        {/*Submit Button*/}
+                        <Button
+                            type='submit'
+                            disabled={loading}
+                            className="px-10 py-3 bg-black text-white"
+                        >
+                            {loading ? "Sending..." : "SEND INQUIRY"}
                         </Button>
 
                     </form>
+                    {/*  Form Ending Point */}
                 </div>
 
                 {/* Right Section */}
@@ -141,17 +316,21 @@ const CTA = () => {
                             </h3>
 
                             <div className="flex gap-3">
-                                <div className="w-8 h-8 border border-gray-300 flex items-center justify-center">
+                                <Link href={'/contact'}
+                                    className="w-8 h-8 border border-gray-300 flex items-center justify-center">
                                     <FaFacebookF size={12} />
-                                </div>
+                                </Link>
 
-                                <div className="w-8 h-8 border border-gray-300 flex items-center justify-center">
+                                <Link href={'https://www.instagram.com/ak_decoration_service/?hl=en'}
+                                    className="w-8 h-8 border border-gray-300 flex items-center justify-center">
                                     <FaInstagram size={12} />
-                                </div>
+                                </Link>
 
-                                <div className="w-8 h-8 border border-gray-300 flex items-center justify-center">
+                                <Link
+                                    href={'https://api.whatsapp.com/send/?phone=917550305180&text=Hello+I+need+decoration+service&type=phone_number&app_absent=0'}
+                                    className="w-8 h-8 border border-gray-300 flex items-center justify-center">
                                     <FaWhatsapp size={12} />
-                                </div>
+                                </Link>
                             </div>
                         </div>
 

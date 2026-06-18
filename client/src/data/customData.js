@@ -11,9 +11,11 @@ export const ADMIN_INFO = {
 export const HEADER_DATA = [
     { title: 'Home', ariaLabel: 'Go to Home page', link: '/' },
     { title: 'About', ariaLabel: 'Go to About page', link: '/about' },
-    { title: 'Gallery', ariaLabel: 'Go to Gallery page', link: '/gallery' },
     { title: 'Services', ariaLabel: 'Go to Services page', link: '/services' },
-    { title: 'Contact', ariaLabel: 'Go to Contact page', link: '/contact' },
+    { title: 'Floral ', ariaLabel: 'Go to Gallery page', link: '/service-detail/floral-decoration' },
+    { title: 'Wedding', ariaLabel: 'Go to Gallery page', link: '/service-detail/wedding-decoration' },
+    { title: 'Gallery', ariaLabel: 'Go to Gallery page', link: '/gallery' },
+   
 ];
 
 export const FOOTER_DATA = [
@@ -81,7 +83,3 @@ export const FOOTER_DATA = [
         ]
     }
 ];
-
-export const FOOTER_BOTTOM_DATA = {
-    copyright: `© ${new Date().getFullYear()} AK Decoration All rights reserved. developed by sajin-cl`,
-};
