@@ -38,11 +38,11 @@ const Footer = () => {
                         />
 
                         <span className="font-bodoni text-white text-xl lg:text-2xl ml-3">
-                            AK DECORATION
+                            AK <span className='text-amber-300'>DECORATION</span>
                         </span>
                     </div>
 
-                    <div className="space-y-2">
+                    <div className="space-y-2 pl-10">
                         <span className="flex items-center justify-center lg:justify-start gap-2 text-white/80 font-sans text-sm">
                             <FaMapMarkerAlt className="text-gray-400" size={15} />
                             Kanyakumari District, Tamil Nadu, India
@@ -62,11 +62,11 @@ const Footer = () => {
                 </div>
 
                 {/* Footer Links Section */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full lg:w-auto">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full lg:w-auto justify-items-center ">
 
                     {FOOTER_DATA.map((section, index) => (
                         <div key={index}>
-                            <h3 className="font-mono uppercase tracking-wider text-amber-200 text-xs mb-4">
+                            <h3 className="font-mono uppercase tracking-wider text-amber-200 text-sm mb-2">
                                 {section.title}
                             </h3>
 
@@ -77,7 +77,7 @@ const Footer = () => {
                                             rel='noopener noreferrer'
                                             target='_blank'
                                             href={link.link}
-                                            className="text-gray-300 text-sm hover:text-white transition-colors duration-300"
+                                            className="text-gray-300 text-xs uppercase hover:text-white transition-colors duration-300"
                                         >
                                             {link.title}
                                         </a>

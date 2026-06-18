@@ -10,6 +10,7 @@ export const ADMIN_INFO = {
 export const HEADER_DATA = [
     { title: 'Home', ariaLabel: 'Go to Home page', link: '/' },
     { title: 'About', ariaLabel: 'Go to About page', link: '/about' },
+    { title: 'Gallery', ariaLabel: 'Go to Gallery page', link: '/gallery' },
     { title: 'Services', ariaLabel: 'Go to Services page', link: '/services' },
     { title: 'Contact', ariaLabel: 'Go to Contact page', link: '/contact' },
 ];
@@ -19,8 +20,16 @@ export const FOOTER_DATA = [
         title: 'Quick Links',
         links: [
             {
+                title: 'Home',
+                link: '/'
+            },
+            {
                 title: 'About',
                 link: '/about'
+            },
+            {
+                title: 'Gallery',
+                link: '/gallery'
             },
             {
                 title: 'Services',
