@@ -21,17 +21,15 @@ const Journey = () => {
                         BOOK A CONSULTATION
                     </Button>
                 </Link>
-            
-                <Button
-                    onClick={() =>
-                        window.open(
-                            `https://mail.google.com/mail/?view=cm&fs=1&to=${ADMIN_INFO.email}&su=Request%20Brochure`,
-                            "_blank"
-                        )
-                    }
-                    className='outline outline-primary font-sans font-bold md:font-normal tracking-wide text-[10px] md:text-[16px]'>
-                    REQUEST BROCHURE
-                </Button>
+
+                <Link
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${ADMIN_INFO.email}&su=Request%20Decoration%20Brochure`}
+                    target="_blank"
+                >
+                    <Button className='outline outline-primary font-sans font-bold md:font-normal tracking-wide text-[10px] md:text-[16px]'>
+                        REQUEST BROCHURE
+                    </Button>
+                </Link>
             </div>
 
         </section>
