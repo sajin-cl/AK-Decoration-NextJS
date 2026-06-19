@@ -9,7 +9,16 @@ const content = {
     description: `Explore our curated collection of monumental events, from sacred floral artistry
 to grand architectural stages. Every detail is a testament to timeless elegance.`,
     image: "/gallery-banner.webp"
-}
+};
+
+
+export const metadata = {
+    title: "Gallery | AK Decoration Service",
+    description: "AK Decoration provides professional wedding, birthday, and event decoration services in Kanyakumari district and marthandam surrounding areas. Affordable, creative, and customized designs.",
+    alternates: {
+        canonical: "/gallery",
+    }
+};
 
 
 const GalleryPage = () => {

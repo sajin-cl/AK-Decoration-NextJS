@@ -12,6 +12,14 @@ const content = {
     image: "/about-banner.webp"
 }
 
+export const metadata = {
+    title: "About Us | AK Decoration Service",
+    description: "AK Decoration provides professional wedding, birthday, and event decoration services in Kanyakumari district and marthandam surrounding areas. Affordable, creative, and customized designs.",
+    alternates: {
+        canonical: "/about",
+    }
+};
+
 export default function AboutPage() {
     return (
         <>

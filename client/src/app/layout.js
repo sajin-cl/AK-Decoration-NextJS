@@ -24,6 +24,78 @@ const bodoniModa = Bodoni_Moda({
 export const metadata = {
   title: "AK Decoration Service",
   description: `AK Decoration provides professional wedding, birthday, and event decoration services in Kanyakumari district and marthandam surrounding areas. Affordable, creative, and customized designs.`,
+  keywords: [
+    'event decoration in kanyakumari',
+    'wedding decoration in marthandam',
+    'birthday decoration kanyakumari',
+    'ak decoration marthandam',
+    'event decorators near me',
+    'wedding stage decoration kanyakumari',
+    'party decoration in nagercoil',
+    'event management kanyakumari',
+    'balloon decoration near me',
+    'professional decorators kanyakumari',
+    'birthday party organizers kanyakumari',
+    'event decorators nagercoil',
+    'event planning kanyakumari',
+    'marwadi decoration kanyakumari',
+    'floral decoration in marthandam',
+    'best event decorators kanyakumari',
+    'event decorators near nagercoil',
+    'decoration services kanyakumari',
+    'ak decoration nagercoil',
+    'event decorators kanyakumari price'
+  ],
+  authors: [{ name: "Sajin C L" }],
+  creator: "Sajin C L",
+  publisher: "Sajin C L",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  icons: {
+    apple: "/apple-touch-icon.png"
+  },
+
+  openGraph: {
+    metadataBase: new URL(
+      process.env.NODE_ENV === "production"
+        ? "https://ak-decoration.vercel.app"
+        : "http://localhost:3000"
+    ),
+    title: "AK Decoration Service | Best Event Decoration in Kanyakumari",
+    description:
+      "AK Decoration provides professional wedding, birthday, and event decoration services in Kanyakumari district and marthandam surrounding areas. Affordable, creative, and customized designs.",
+    url: "/",
+    siteName: "AK Decoration",
+    type: "website",
+    images: [
+      {
+        url: "/preview-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "AK Decoration service",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "AK Decoration Service | Best Event Decoration in Kanyakumari",
+    description:
+      "AK Decoration provides professional wedding, birthday, and event decoration services in Kanyakumari district and marthandam surrounding areas. Affordable, creative, and customized designs.",
+    images: ["/preview-image.webp"],
+  },
 
 };
 

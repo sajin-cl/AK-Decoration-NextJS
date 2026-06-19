@@ -9,6 +9,20 @@ const OurProcess = dynamic(() => import('@/components/common/OurProcess'));
 const Content = dynamic(() => import('@/components/servie-details/content'));
 const Highlights = dynamic(() => import('@/components/servie-details/highlights'));
 
+
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    return {
+        title: `${slug} | AK Decoration Service`,
+        description: `AK Decoration provides professional wedding, birthday, and event decoration services in Kanyakumari district and marthandam surrounding areas. Affordable, creative, and customized designs.`,
+        alternates: {
+            canonical: `/service-detail/${slug}`,
+        }
+    };
+};
+
+
+
 const ServiceDetailPage = async ({ params }) => {
 
     const { slug } = await params;
