@@ -10,7 +10,8 @@ const Banner = ({ data }) => {
         <section className='relative min-h-screen w-full overflow-x-hidden'>
             {/* Gradient design top layer*/}
             <div className='absolute bottom-0 left-0 w-full h-48 bg-linear-to-t from-white via-white/70 to-transparent z-10'></div>
-
+              
+    
             {/* Background Image */}
             <Image
                 src={image}
@@ -25,7 +26,7 @@ const Banner = ({ data }) => {
 
             {/* Hero section absolute contents */}
             <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 space-y-4 w-full max-w-5xl px-5'>
-                <p className='text-amber-200 text-center font-medium text-xl tracking-wide'>
+                <p className='text-amber-300 text-shadow-lg text-center font-semibold text-xl tracking-wide'>
                     {subtitle}
                 </p>
 

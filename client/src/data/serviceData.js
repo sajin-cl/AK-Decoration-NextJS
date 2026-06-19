@@ -13,7 +13,7 @@ const SERVICES_DATA = {
             subtitle: "SINCE INCEPTION",
             title: "Curating the Extraordinary",
             image:
-                `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/stage-decor-service-content_u6nwuw.webp`,
+                `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/stage-decor_kf7giu.webp`,
             description: [
                 "Founded on the principles of precision and theatrical beauty, AK Decoration has evolved from a local floral studio into Kanyakumari's most sought-after event curation house.",
 
@@ -54,8 +54,8 @@ const SERVICES_DATA = {
             title: "Wedding Decoration",
             subtitle: "GRAND EVENT PRODUCTION",
             description: "Creating unforgettable wedding experiences.",
-            image: "/wedding/wedding-banner.webp",
-        },
+            image: "/wedding-decoration-banner-v1.webp",
+        }, 
 
         content: {
             subtitle: "THE MASTERY",
