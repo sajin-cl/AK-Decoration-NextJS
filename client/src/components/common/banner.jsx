@@ -17,7 +17,6 @@ const Banner = ({ data }) => {
                 src={image}
                 fill
                 sizes='100vw'
-                fetchPriority='high'
                 priority
                 quality={65}
                 className='object-cover'
