@@ -1,16 +1,12 @@
-"use client";
-
 import React from 'react'
 import Button from '@/components/ui/Button'
 import { ADMIN_INFO, FOOTER_DATA } from "@/data/customData"
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import Image from 'next/image'
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 const Footer = () => {
 
-    const router = useRouter();
 
     return (
         <footer className="relative w-full bg-[#303031] pt-20 lg:pt-30 px-5  lg:px-20 overflow-x-hidden">
@@ -25,9 +21,12 @@ const Footer = () => {
                     Book a consultation today and let's design an event that tells your unique story with elegance and grandeur.
                 </p>
 
-                <Button onClick={() => router.push('/contact')} className="px-8 lg:px-12 py-3 bg-primary text-white border border-primary">
-                    BOOK NOW
-                </Button>
+                <Link href={'/contact'}>
+                    <Button
+                        className="px-8 lg:px-12 py-3 bg-primary text-white border border-primary">
+                        BOOK NOW
+                    </Button>
+                </Link>
             </div>
 
             {/* Footer Service Section */}

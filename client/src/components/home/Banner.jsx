@@ -1,14 +1,12 @@
-"use client"
-
 import React from 'react'
 import Image from 'next/image';
 import logo from '../../../public/logo.png'
 import Button from '../ui/Button';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+
 
 const Banner = () => {
 
-    const router = useRouter();
 
     return (
         <section id='hero-section' className='relative min-h-screen w-full overflow-hidden'>
@@ -46,16 +44,19 @@ const Banner = () => {
                     Transforming your special moments into unforgettable experiences
                 </p>
                 <div className='flex justify-center items-center gap-2 md:gap-4'>
-                    <Button
-                        onClick={() => router.push('/contact')}
-                        className="px-10 md:px-12 py-3 bg-primary text-nowrap text-white border border-primary">
-                        BOOK NOW
-                    </Button>
-                    <Button
-                        onClick={() => router.push('/gallery')}
-                        className="px-10 md:px-12 py-3 bg-transparent text-nowrap text-white border">
-                        VIEW GALLERY
-                    </Button>
+                    <Link href={'/contact'}>
+                        <Button
+                            className="px-10 md:px-12 py-3 bg-primary text-nowrap text-white border border-primary">
+                            BOOK NOW
+                        </Button>
+                    </Link>
+
+                    <Link href={'/gallery'}>
+                        <Button
+                            className="px-10 md:px-12 py-3 bg-transparent text-nowrap text-white border">
+                            VIEW GALLERY
+                        </Button>
+                    </Link>
                 </div>
             </div>
 

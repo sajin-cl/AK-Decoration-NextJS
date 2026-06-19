@@ -1,13 +1,9 @@
-"use client"
-
 import React from 'react'
 import Button from '../ui/Button'
-import { useRouter } from 'next/navigation'
 import { ADMIN_INFO } from '@/data/customData'
+import Link from 'next/link'
 
 const Journey = () => {
-
-    const router = useRouter();
 
     return (
         <section className='w-full flex flex-col  justify-center items-center overflow-x-hidden bg-[#F4F4F2] px-10 md:px-20 py-30 gap-8'>
@@ -19,18 +15,20 @@ const Journey = () => {
                 craftsmanship.
             </p>
             <div className='btn-section flex gap-5 items-center'>
-                <Button
-                    onClick={() => router.push('/contact')}
-                    className='bg-primary text-white font-sans font-bold md:font-normal tracking-wide text-[10px] md:text-[16px]'>
-                    BOOK A CONSULTATION
-                </Button>
+                <Link href={'/contact'}>
+                    <Button
+                        className='bg-primary text-white font-sans font-bold md:font-normal tracking-wide text-[10px] md:text-[16px]'>
+                        BOOK A CONSULTATION
+                    </Button>
+                </Link>
+            
                 <Button
                     onClick={() =>
                         window.open(
                             `https://mail.google.com/mail/?view=cm&fs=1&to=${ADMIN_INFO.email}&su=Request%20Brochure`,
                             "_blank"
                         )
-                    } 
+                    }
                     className='outline outline-primary font-sans font-bold md:font-normal tracking-wide text-[10px] md:text-[16px]'>
                     REQUEST BROCHURE
                 </Button>
