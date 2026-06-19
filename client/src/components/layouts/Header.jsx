@@ -31,7 +31,7 @@ const Header = () => {
                         width={48}
                         height={48}
                         quality={65}
-                        fetchPriority='high'
+                        priority
                         className="object-contain"
                         alt="AK Decoration"
                     />
