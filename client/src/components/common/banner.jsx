@@ -7,7 +7,7 @@ const Banner = ({ data }) => {
     const { subtitle, title, description, image } = data;
 
     return (
-        <section className='relative min-h-screen w-full overflow-x-hidden'>
+        <section className='relative min-h-screen w-full overflow-x-hidden bg-[#fbf9f8]'>
             {/* Gradient design top layer*/}
             <div className='absolute bottom-0 left-0 w-full h-48 bg-linear-to-t from-white via-white/70 to-transparent z-10'></div>
               
@@ -17,8 +17,9 @@ const Banner = ({ data }) => {
                 src={image}
                 fill
                 sizes='100vw'
-                priority
-                quality={65}
+                loading='lazy'
+                quality={60}
+                unoptimized
                 className='object-cover'
                 alt={title}
             />

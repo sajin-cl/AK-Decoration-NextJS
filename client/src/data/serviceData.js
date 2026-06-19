@@ -6,7 +6,7 @@ const SERVICES_DATA = {
             description:
                 "Redefining the Indian mandap through floral monumentalism, shimmering starlight effects, and opulent architectural draping.",
             image:
-                "/floral-service-detail-banner.webp",
+                `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/floral-service-detail-banner_hwqaui.webp`,
         },
 
         content: {
@@ -54,8 +54,8 @@ const SERVICES_DATA = {
             title: "Wedding Decoration",
             subtitle: "GRAND EVENT PRODUCTION",
             description: "Creating unforgettable wedding experiences.",
-            image: "/wedding-decoration-banner-v1.webp",
-        }, 
+            image: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/wedding-decoration-banner-v1_zhbruq.webp`,
+        },
 
         content: {
             subtitle: "THE MASTERY",
@@ -96,7 +96,7 @@ const SERVICES_DATA = {
             title: "Luxury Floral Decoration",
             subtitle: "GRAND EVENT PRODUCTION",
             description: "The sacred language of jasmine and marigold, curated for the most opulent Indian celebrations.",
-            image: "/floral-decoration.webp",
+            image: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/floral-decoration_vinmlx.webp`,
         },
 
         content: {

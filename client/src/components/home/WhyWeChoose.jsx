@@ -4,27 +4,27 @@ import Card from '@/components/ui/Card'
 
 const WHY_WE_CHOOSE_CARD_DETAILS = [
     {
-        icon: '/paint-Icon.png', title: 'Creative & Stylish Designs',
+        icon:  `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/paint-Icon_lxndxg.png`, title: 'Creative & Stylish Designs',
         desc: `Bespoke concepts that blend contemporary trends with timeless traditional elegance.`
     },
     {
-        icon: '/celebrate-Icon.png', title: `Complete Decoration Solutions`,
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/celebrate-Icon_uifjr4.png`, title: `Complete Decoration Solutions`,
         desc: `From grand entrances to minute table details, we handle the entire visual journey.`
     },
     {
-        icon: '/clock-Icon.png', title: 'On-Time Setup',
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/clock-Icon_jfoc6x.png`, title: 'On-Time Setup',
         desc: `Punctuality is our hallmark. We ensure your venue is ready well before the first guest arrives.`
     },
     {
-        icon: '/diamond-Icon.png', title: `Premium Quality Materials`,
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/diamond-Icon_u4u0cl.png`, title: `Premium Quality Materials`,
         desc: `We use only the freshest flora and high-grade fabrics for a truly luxurious feel.`
     },
     {
-        icon: '/tick-Icon.png', title: `Experience in Event Decoration`,
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/tick-Icon_cqgb2v.png`, title: `Experience in Event Decoration`,
         desc: `Over a decade of expertise in transforming Kanyakumari's most prestigious venues.`
     },
     {
-        icon: '/wallet-Icon.png', title: `Budget-Friendly Packages`,
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/wallet-Icon_nwotqk.png`, title: `Budget-Friendly Packages`,
         desc: `Premium aesthetics tailored to your investment, ensuring maximum visual impact.`
     },
 ];

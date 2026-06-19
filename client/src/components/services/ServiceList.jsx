@@ -5,28 +5,32 @@ import React from 'react'
 
 const LIST = [
     {
-        id: 1, title: 'Floral Decor', subTitle: 'Botanical Artistry', image: '/floral-decor-bg.webp',
+        id: 1, title: 'Floral Decor', subTitle: 'Botanical Artistry',
+        image: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/floral-decor-bg_txjudu.webp`,
         content: `We view flowers as living architecture. Our floral designs range from delicatehtable accents to massive, immersive botanical installations that transform static rooms into breathing landscapes.`,
         points: ["Bespoke floral arrangements & centerpieces", "Bespoke floral arrangements & centerpieces", "Bespoke floral arrangements & centerpieces"],
         explore: 'EXPLORE FLORAL PORTFOLIO',
         goTo: '/service-detail/floral-decoration'
     },
     {
-        id: 2, title: 'Stage Design', subTitle: 'Scenic Architecture', image: '/stage-decor-bg.webp',
+        id: 2, title: 'Stage Design', subTitle: 'Scenic Architecture',
+        image: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/stage-decor-bg_ztkssl.webp`,
         content: `The focal point of any great event is its stage. We design and build custom scenic environments that serve as the heartbeat of your celebration, combining structural integrity with thematic beauty.`,
         points: ["Custom stage setups & thematic builds", "Scenic design & backdrop fabrication", "3D spatial planning and visualization"],
         explore: 'EXPLORE STAGE PORTFOLIO',
         goTo: '/service-detail/stage-decoration'
     },
     {
-        id: 3, title: 'Wedding Planning', subTitle: 'End-to-End Curation', image: '/wedding-decor-bg.webp',
+        id: 3, title: 'Wedding Planning', subTitle: 'End-to-End Curation',
+        image: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/wedding-decor-bg_msmfws.webp`,
         content: `Experience the ease of luxury. Our planning division handles every detail of your wedding, from venue selection and logistics to final decor installation, ensuring a cohesive and stress-free journey.`,
         points: ["Comprehensive logistics & timeline management", "Vendor coordination & site supervision", "Full-service aesthetic & conceptual curation"],
         explore: 'EXPLORE WEDDING PORTFOLIO',
         goTo: '/service-detail/wedding-decoration'
     },
     {
-        id: 4, title: 'Event Lighting', subTitle: 'Atmospheric Excellence', image: '/lighting-decor-bg.webp',
+        id: 4, title: 'Event Lighting', subTitle: 'Atmospheric Excellence',
+        image: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/lighting-decor-bg_f2myu5.webp`,
         content: `Light defines emotion. We use strategic mood lighting and acoustic planning to create multi-sensory experiences that guide your guests through a carefully crafted emotional narrative.`,
         points: ["Strategic mood & architectural lighting", "Acoustic planning & soundscape design", "Intelligent lighting effects & show programming"],
         explore: 'EXPLORE LIGHTING PORTFOLIO',
@@ -50,6 +54,8 @@ const ServiceList = () => {
                             height={550}
                             quality={65}
                             alt={service?.title}
+                            unoptimized
+                            loading='lazy'
                             sizes="(max-width: 1280px) 100vw, 544px"
                         />
                     </div>

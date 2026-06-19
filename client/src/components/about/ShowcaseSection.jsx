@@ -25,9 +25,10 @@ const ShowcaseSection = () => {
                 {/* Image - Only lg and above */}
                 <div className="hidden lg:block w-full h-full relative">
                     <Image
-                        src="/wedding-decoration.webp"
+                        src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/wedding-decoration_yxczle.webp`}
                         fill
                         quality={65}
+                        unoptimized
                         alt="Wedding Decoration"
                         sizes="(min-width:1024px) 50vw"
                         className="object-cover"

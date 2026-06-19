@@ -44,8 +44,9 @@ const Content = ({ data }) => {
                         src={image}
                         fill
                         sizes='240'
-                        priority
                         quality={65}
+                        loading='lazy'
+                        unoptimized
                         alt={title}
                         className='object-cover'
                     />
@@ -56,7 +57,8 @@ const Content = ({ data }) => {
                             sizes='(max-width: 768px) 100vw, 256px'
                             alt='preview-image'
                             className=' object-cover'
-                            priority
+                            unoptimized
+                            loading='lazy'
                             quality={65}
                         />
 

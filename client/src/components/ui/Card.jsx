@@ -11,7 +11,8 @@ const Card = ({ icon, title, desc }) => {
                         alt={title}
                         height={25}
                         width={25} 
-                        priority
+                        unoptimized
+                        loading='lazy'
                         quality={65}
                         className='object-contain '
                     />

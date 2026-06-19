@@ -11,17 +11,17 @@ import { toast } from 'react-toastify';
 
 const CONTACT_INFO = [
     {
-        icon: '/location-Icon.png',
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/location-Icon_gmqqeh.png`,
         title: 'Our Studio',
         desc: 'AK Decoration Headquarters \n Nagercoil - Kanyakumari Main Rd, \n Kanyakumari District, Tamil Nadu.'
     },
     {
-        icon: '/call-Icon.png',
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/call-Icon_nfskv4.png`,
         title: 'Speak with Us',
         desc: `${ADMIN_INFO.phone} \n Available Mon-Sat, 9 AM to 8 PM`
     },
     {
-        icon: '/mail-Icon.png',
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/mail-Icon_dnjeqn.png`,
         title: 'General Inquiries',
         desc: `${ADMIN_INFO.email} \n For collaborations and careers.`
     }
@@ -290,6 +290,7 @@ const CTA = () => {
                                     width={20}
                                     height={20}
                                     quality={65}
+                                    unoptimized
                                     className="mb-4"
                                 />
 
@@ -305,11 +306,12 @@ const CTA = () => {
 
                         <div>
                             <Image
-                                src="/share-Icon.png"
+                                src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/share-Icon_xvsab6.png`}
                                 alt="Social"
                                 width={18}
                                 height={18}
                                 quality={65}
+                                unoptimized
                                 className="mb-4"
                             />
 

@@ -7,15 +7,18 @@ import React from 'react'
 
 const SERVICE_DETAILS = [
     {
-        icon: '/floral-decoration.webp', title: 'Floral Decoration', link: '/service-detail/floral-decoration',
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/floral-decoration_vinmlx.webp`,
+        title: 'Floral Decoration', link: '/service-detail/floral-decoration',
         desc: `Artisanal flower arrangements using premium seasonal blooms to create a fragrant, living atmosphere.`
     },
     {
-        icon: '/wedding-decoration.webp', title: `Wedding Decoration`, link: '/service-detail/wedding-decoration',
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/wedding-decoration_yxczle.webp`,
+        title: `Wedding Decoration`, link: '/service-detail/wedding-decoration',
         desc: `Comprehensive event styling from entrance to exit, ensuring a cohesive and regal visual narrative.`
     },
     {
-        icon: '/stage-decoration.webp', title: 'Stage Decoration', link: '/service-detail/stage-decoration',
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/stage-decoration_bkqdnw.webp`,
+        title: 'Stage Decoration', link: '/service-detail/stage-decoration',
         desc: `Statement stages designed as the perfect backdrop for your most cherished photographs and moments.`
     },
 ];
@@ -54,6 +57,8 @@ const OurServices = () => {
                                 width={352}
                                 height={528}
                                 quality={65}
+                                loading='lazy'
+                                unoptimized
                                 className="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-500 "
                             />
                         </div>

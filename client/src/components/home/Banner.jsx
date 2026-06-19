@@ -15,11 +15,11 @@ const Banner = () => {
 
             {/* Background Image */}
             <Image
-                src={'/hero-banner.webp'}
+                src={'/hero-banner-img.avif'}
                 fill
                 sizes='100vw'
                 priority
-                quality={65}
+                quality={60}
                 className='object-cover'
                 alt='hero-banner'
             />
@@ -62,10 +62,17 @@ const Banner = () => {
 
             {/* Bottom Arrow */}
             <span className='absolute bottom-0 lg:bottom-5 left-1/2 -translate-x-1/2 z-40'>
-                <img src="/down-arrow-Icon.png"
+                <Image
+                    src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/down-arrow-Icon_ftkhtu.png`}
                     aria-hidden="true"
-                    className='h-5 w-4.5 text-white animate-bounce'
+                    height={20}
+                    width={16}
+                    quality={60}
+                    loading='lazy'
+                    className='text-white animate-bounce'
+                    alt=''
                 />
+
             </span>
         </section>
     )

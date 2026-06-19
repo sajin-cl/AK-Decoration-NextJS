@@ -3,15 +3,15 @@ import Card from '@/components/ui/Card';
 
 const PILLORS = [
     {
-        icon: '/paint-Icon.png', title: `Artistry`,
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/paint-Icon_lxndxg.png`, title: `Artistry`,
         desc: `We approach every stage as a blank canvas, utilizing rare blooms andbespoke architectural elements to create immersive visual experiences.`
     },
     {
-        icon: '/tower-Icon.png', title: `Precision`,
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/tower-Icon_m1cqrn.png`, title: `Precision`,
         desc: `Every petal placement and lighting angle is calculated with surgical accuracy. We believe that true luxury resides in the smallest details.`
     },
     {
-        icon: '/stars-Icon.png', title: `Client Vision`,
+        icon: `${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/stars-Icon_p3jznf.png`, title: `Client Vision`,
         desc: `Your story is our blueprint. we translate intangible dreams into tangible reality, ensuring your personality shines through every floral arch.`
     },
 

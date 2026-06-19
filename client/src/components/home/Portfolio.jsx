@@ -38,6 +38,7 @@ const Portfolio = () => {
                             width={800}
                             height={400}
                             loading='lazy'
+                            unoptimized
                             quality={65}
                             className="w-full h-[250px] md:h-[340px] object-cover"
                         />
@@ -48,6 +49,7 @@ const Portfolio = () => {
                             alt="Portfolio 2"
                             width={400}
                             height={400}
+                            unoptimized
                             quality={65}
                             loading='lazy'
                             className="w-full h-[250px] md:h-[340px] object-cover"
@@ -63,6 +65,7 @@ const Portfolio = () => {
                             alt="Portfolio 3"
                             width={400}
                             height={400}
+                            unoptimized
                             quality={65}
                             loading='lazy'
                             className="w-full h-[250px] md:h-[320px] object-cover"
@@ -74,6 +77,7 @@ const Portfolio = () => {
                             alt="Portfolio 4"
                             width={800}
                             height={400}
+                            unoptimized
                             quality={65}
                             loading='lazy'
                             className="w-full h-[250px] md:h-[320px] object-cover"

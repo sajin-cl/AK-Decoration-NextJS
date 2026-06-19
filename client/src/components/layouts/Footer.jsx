@@ -41,6 +41,7 @@ const Footer = () => {
                             height={60}
                             width={60}
                             quality={65}
+                            loading='lazy'
                             alt="ak-decoration-footer-logo"
                         />
 

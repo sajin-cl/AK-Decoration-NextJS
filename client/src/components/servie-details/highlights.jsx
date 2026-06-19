@@ -40,6 +40,8 @@ const Highlights = ({ data }) => {
               width={800}
               height={1000}
               quality={65}
+              unoptimized
+              loading="lazy"
               className="w-full h-full object-cover transition duration-500 hover:scale-105"
             />
           </div>

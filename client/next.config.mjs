@@ -5,16 +5,19 @@ const nextConfig = {
   */
 
   images: {
+    qualities: [50, 65, 75],
+
     formats: ["image/webp", "image/avif"],
 
     deviceSizes: [320, 640, 768, 1024, 1280, 1536,],
 
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384,],
 
-    remotePatterns: [ 
+    remotePatterns: [
       {
         protocol: "https",
         hostname: "res.cloudinary.com",
+        pathname: "/**",
       },
     ],
   },

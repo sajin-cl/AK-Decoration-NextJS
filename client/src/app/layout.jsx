@@ -22,6 +22,11 @@ const bodoniModa = Bodoni_Moda({
 })
 
 export const metadata = {
+  metadataBase: new URL(
+    process.env.NODE_ENV === "production"
+      ? "https://ak-decoration.vercel.app"
+      : "http://localhost:3000"
+  ),
   title: "AK Decoration Service",
   description: `AK Decoration provides professional wedding, birthday, and event decoration services in Kanyakumari district and marthandam surrounding areas. Affordable, creative, and customized designs.`,
   keywords: [
@@ -68,11 +73,7 @@ export const metadata = {
   },
 
   openGraph: {
-    metadataBase: new URL(
-      process.env.NODE_ENV === "production"
-        ? "https://ak-decoration.vercel.app"
-        : "http://localhost:3000"
-    ),
+
     title: "AK Decoration Service | Best Event Decoration in Kanyakumari",
     description:
       "AK Decoration provides professional wedding, birthday, and event decoration services in Kanyakumari district and marthandam surrounding areas. Affordable, creative, and customized designs.",
@@ -108,7 +109,7 @@ export default function RootLayout({ children }) {
 
       <body className="min-h-full flex flex-col w-full overflow-x-clip">
         <Header />
-        <main>
+        <main className="flex-1">
           {children}
         </main>
         <Footer />
