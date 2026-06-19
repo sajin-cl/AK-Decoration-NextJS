@@ -1,7 +1,9 @@
-import Aboutme from "@/components/about/Aboutme";
-import Pillors from "@/components/about/Pillors";
-import ShowcaseSection from "@/components/about/ShowcaseSection";
+import dynamic from "next/dynamic";
+
 import Banner from "@/components/common/banner";
+const Aboutme = dynamic(() => import("@/components/about/Aboutme"));
+const Pillors = dynamic(() => import("@/components/about/Pillors"));
+const ShowcaseSection = dynamic(() => import("@/components/about/ShowcaseSection"));
 
 const content = {
     subtitle: "LEGACY OF CRAFTSMANSHIP",
@@ -13,7 +15,7 @@ const content = {
 export default function AboutPage() {
     return (
         <>
-            <Banner {...content} />
+            <Banner data={content} />
             <Aboutme />
             <Pillors />
             <ShowcaseSection />

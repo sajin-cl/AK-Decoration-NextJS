@@ -52,6 +52,7 @@ const OurServices = () => {
                             alt={service?.title}
                             width={352}
                             height={528}
+                            quality={65}
                             className="w-full h-[450px] object-cover"
                         />
 

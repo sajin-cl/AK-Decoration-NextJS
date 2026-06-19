@@ -12,6 +12,7 @@ const Card = ({ icon, title, desc }) => {
                         height={25}
                         width={25} 
                         priority
+                        quality={65}
                         className='object-contain '
                     />
                 </div>

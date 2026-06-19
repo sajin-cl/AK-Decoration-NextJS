@@ -45,6 +45,7 @@ const Content = ({ data }) => {
                         fill
                         sizes='240'
                         priority
+                        quality={65}
                         alt={title}
                         className='object-cover'
                     />
@@ -56,6 +57,7 @@ const Content = ({ data }) => {
                             alt='preview-image'
                             className=' object-cover'
                             priority
+                            quality={65}
                         />
 
                     </div>

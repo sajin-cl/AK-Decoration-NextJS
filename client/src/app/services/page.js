@@ -1,8 +1,10 @@
-import Intro from '@/components/services/Intro';
-import Journey from '@/components/services/Journey';
-import OurProcess from '@/components/common/OurProcess';
-import ServiceList from '@/components/services/ServiceList';
 import React from 'react'
+import dynamic from 'next/dynamic';
+import Intro from '@/components/services/Intro';
+
+const Journey = dynamic(() => import('@/components/services/Journey'));
+const OurProcess = dynamic(() => import('@/components/common/OurProcess'));
+const ServiceList = dynamic(() => import('@/components/services/ServiceList'));
 
 const ServicePage = () => {
     return (

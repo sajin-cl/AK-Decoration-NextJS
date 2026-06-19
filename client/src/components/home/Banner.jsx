@@ -21,6 +21,7 @@ const Banner = () => {
                 fill
                 sizes='100vw'
                 priority
+                quality={65}
                 className='object-cover'
                 alt='hero-banner'
             />
@@ -32,6 +33,7 @@ const Banner = () => {
                     alt='ak-decoration-logo'
                     height={96}
                     width={96}
+                    quality={65}
                     className='mx-auto'
                     priority
                 />

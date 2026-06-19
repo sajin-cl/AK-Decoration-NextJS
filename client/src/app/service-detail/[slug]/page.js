@@ -1,10 +1,13 @@
-import OurProcess from '@/components/common/OurProcess';
-import Banner from '@/components/servie-details/banner';
-import Content from '@/components/servie-details/content';
-import Highlights from '@/components/servie-details/highlights';
-import SERVICES_DATA from '@/data/serviceData';
-import { notFound } from 'next/navigation';
 import React from 'react'
+import dynamic from 'next/dynamic';
+import { notFound } from 'next/navigation';
+import SERVICES_DATA from '@/data/serviceData';
+import Banner from '@/components/common/banner';
+
+
+const OurProcess = dynamic(() => import('@/components/common/OurProcess'));
+const Content = dynamic(() => import('@/components/servie-details/content'));
+const Highlights = dynamic(() => import('@/components/servie-details/highlights'));
 
 const ServiceDetailPage = async ({ params }) => {
 

@@ -27,6 +27,7 @@ const ShowcaseSection = () => {
                     <Image
                         src="/wedding-decoration.webp"
                         fill
+                        quality={65}
                         alt="Wedding Decoration"
                         sizes="(min-width:1024px) 50vw"
                         className="object-cover"

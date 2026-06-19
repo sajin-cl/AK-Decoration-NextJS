@@ -1,7 +1,11 @@
+import dynamic from "next/dynamic";
+
 import Banner from "@/components/home/Banner";
-import OurServices from "@/components/home/OurServices";
-import Portfolio from "@/components/home/Portfolio";
-import WhyWeChoose from "@/components/home/WhyWeChoose";
+
+const WhyWeChoose = dynamic(() => import("@/components/home/WhyWeChoose"))
+const Portfolio = dynamic(() => import("@/components/home/Portfolio"))
+const OurServices = dynamic(() => import("@/components/home/OurServices"))
+
 
 export default function Home() {
   return (
@@ -9,7 +13,7 @@ export default function Home() {
       <Banner />
       <WhyWeChoose />
       <OurServices />
-      <Portfolio/>
+      <Portfolio />
     </>
   );
 };

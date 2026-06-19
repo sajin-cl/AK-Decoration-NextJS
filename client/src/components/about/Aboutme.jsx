@@ -50,6 +50,7 @@ const Aboutme = () => {
                     <Image
                         src={'/floral-decoration.webp'}
                         fill
+                        quality={65}
                         sizes='240'
                         loading='lazy'
                         alt='About image'
@@ -58,6 +59,7 @@ const Aboutme = () => {
                     <div className="absolute -bottom-5 -left-5 w-20 h-20 bg-gray-400">
                         <Image
                             src={'/logo.png'}
+                            quality={65}
                             width={200}
                             height={200}
                             alt='logo'

@@ -48,6 +48,7 @@ const ServiceList = () => {
                             className='w-full h-full object-cover rounded-xl'
                             width={544}
                             height={550}
+                            quality={65}
                             alt={service?.title}
                             sizes="(max-width: 1280px) 100vw, 544px"
                         />

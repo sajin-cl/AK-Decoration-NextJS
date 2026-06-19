@@ -1,5 +1,7 @@
+import dynamic from 'next/dynamic';
+
 import Banner from '@/components/common/banner';
-import GallerySection from '@/components/gallery/GallerySection';
+const GallerySection = dynamic(() => import('@/components/gallery/GallerySection'));
 
 
 const content = {
@@ -13,7 +15,7 @@ to grand architectural stages. Every detail is a testament to timeless elegance.
 const GalleryPage = () => {
     return (
         <>
-            <Banner {...content} />
+            <Banner data={content} />
             <GallerySection />
         </>
     )

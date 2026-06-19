@@ -285,19 +285,20 @@ const CTA = () => {
                         {CONTACT_INFO.map((item, index) => (
                             <div key={index}>
                                 <Image
-                                    src={item.icon}
-                                    alt={item.title}
+                                    src={item?.icon}
+                                    alt={item?.title}
                                     width={20}
                                     height={20}
+                                    quality={65}
                                     className="mb-4"
                                 />
 
                                 <h3 className="font-bodoni text-[20px] font-bold text-primary mb-2">
-                                    {item.title}
+                                    {item?.title}
                                 </h3>
 
                                 <p className="text-[14px] leading-7 text-gray-500 whitespace-pre-line">
-                                    {item.desc}
+                                    {item?.desc}
                                 </p>
                             </div>
                         ))}
@@ -308,6 +309,7 @@ const CTA = () => {
                                 alt="Social"
                                 width={18}
                                 height={18}
+                                quality={65}
                                 className="mb-4"
                             />
 
