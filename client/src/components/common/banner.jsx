@@ -17,9 +17,8 @@ const Banner = ({ data }) => {
                 src={image}
                 fill
                 sizes='100vw'
-                loading='lazy'
+                priority
                 quality={60}
-                unoptimized
                 className='object-cover'
                 alt={title}
             />
