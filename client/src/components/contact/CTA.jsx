@@ -67,11 +67,14 @@ const CTA = () => {
     const validateForm = () => {
         const newErrors = {};
 
-        if (!formData.fullName.trim()) newErrors.fullName = "Name is required";
-        if (!formData.eventType) newErrors.eventType = "Event type is required";
-        if (!formData.phoneNo) newErrors.phoneNo = "Phone no is required";
-        if (!formData.eventDate) newErrors.eventDate = "Event date is required";
-        if (!formData.message.trim()) newErrors.message = "Message is required";
+        if (!formData?.fullName.trim()) newErrors.fullName = "Name is required";
+        if (!formData?.eventType) newErrors.eventType = "Event type is required";
+
+        if (!formData?.phoneNo) { newErrors.phoneNo = "Phone no is required"; }
+        else if (formData?.phoneNo.length < 10 || formData?.phoneNo.length > 10) { newErrors.phoneNo = "Phone no must be 10 digits"; }
+
+        if (!formData?.eventDate) newErrors.eventDate = "Event date is required";
+        if (!formData?.message.trim()) newErrors.message = "Message is required";
 
         return newErrors;
     };
