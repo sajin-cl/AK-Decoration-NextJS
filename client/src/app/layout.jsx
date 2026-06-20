@@ -6,6 +6,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { GoogleAnalytics } from "@next/third-parties/google"
 
+
+/* Font List is here */
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,7 +24,14 @@ const bodoniModa = Bodoni_Moda({
   display: "swap"
 })
 
+
+/* Meta Data Details */
 export const metadata = {
+
+  verification: {
+    google: process.env.GOOGLE_VERIFICATION,
+  },
+
   metadataBase: new URL(
     process.env.NODE_ENV === "production"
       ? "https://ak-decoration.vercel.app"
