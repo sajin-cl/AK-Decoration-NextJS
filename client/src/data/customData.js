@@ -3,6 +3,9 @@ export const ADMIN_INFO = {
     email: 'ajithrkumar1999@gmail.com',
     phone: '+91 7550305180', 
     projectsCount: '100',
+    devSite:'https://sajincl-porfolio.vercel.app/',
+    instaLink:'https://www.instagram.com/ak_decoration_service',
+    whatsappLink :'https://api.whatsapp.com/send/?phone=917550305180&text=Hello+I+need+decoration+service&type=phone_number&app_absent=0'
     
 }
 
@@ -74,11 +77,11 @@ export const FOOTER_DATA = [
             },
             {
                 title: 'Whatsapp',
-                link: 'https://api.whatsapp.com/send/?phone=917550305180&text=Hello+I+need+decoration+service&type=phone_number&app_absent=0'
+                link: ADMIN_INFO?.whatsappLink
             },
             {
                 title: 'Instagram',
-                link: 'https://www.instagram.com/ak_decoration_service/?hl=en'
+                link: ADMIN_INFO?.instaLink
             },
         ]
     }

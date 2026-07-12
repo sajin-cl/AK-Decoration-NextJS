@@ -9,7 +9,7 @@ const STEPS = [
 
 const OurProcess = () => {
     return (
-        <section id='our-process-section' className='w-full overflow-x-hidden bg-[#051A0F] px-10 md:px-20 py-10'>
+        <section id='our-process-section' className='w-full overflow-x-hidden bg-[#051A0F] px-10 md:px-20 py-15'>
 
             {/* Top heading */}
             <div className='flex flex-col items-center '>

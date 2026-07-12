@@ -148,7 +148,7 @@ const CTA = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                             {/*1.Name Field*/}
                             <div>
-                                <label htmlFor='full-name' className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2">
+                                <label htmlFor='full-name' className="block text-[11px] uppercase tracking-wider text-primary mb-2">
                                     Full Name
                                 </label>
 
@@ -170,7 +170,7 @@ const CTA = () => {
                             {/*2.Event Type Field*/}
                             <div>
                                 <label htmlFor='event-type'
-                                    className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2"
+                                    className="block text-[11px] uppercase tracking-wider text-primary mb-2"
                                 >
                                     Event Type
                                 </label>
@@ -200,7 +200,7 @@ const CTA = () => {
                         <div className='mb-8'>
                             <label
                                 htmlFor='phone-no'
-                                className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2">
+                                className="block text-[11px] uppercase tracking-wider text-primary mb-2">
                                 Phone number
                             </label>
 
@@ -224,7 +224,7 @@ const CTA = () => {
                         <div className="mb-8">
                             <label
                                 htmlFor='event-date'
-                                className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2"
+                                className="block text-[11px] uppercase tracking-wider text-primary mb-2"
                             >
                                 Date of Event
                             </label>
@@ -247,7 +247,7 @@ const CTA = () => {
                         <div className="mb-10">
                             <label
                                 htmlFor='message'
-                                className="block text-[11px] uppercase tracking-wider text-gray-500 mb-2"
+                                className="block text-[11px] uppercase tracking-wider text-primary mb-2"
                             >
                                 Your Message
                             </label>
@@ -328,13 +328,16 @@ const CTA = () => {
                                     <FaFacebookF size={12} />
                                 </Link>
 
-                                <Link href={'https://www.instagram.com/ak_decoration_service/?hl=en'}
+                                <Link href={ADMIN_INFO?.instaLink}
+                                    rel='noopener noreferrer'
+                                    target='_blank'
                                     className="w-8 h-8 border border-gray-300 flex items-center justify-center">
                                     <FaInstagram size={12} />
                                 </Link>
 
-                                <Link
-                                    href={'https://api.whatsapp.com/send/?phone=917550305180&text=Hello+I+need+decoration+service&type=phone_number&app_absent=0'}
+                                <Link href={ADMIN_INFO?.whatsappLink}
+                                    rel='noopener noreferrer'
+                                    target='_blank'
                                     className="w-8 h-8 border border-gray-300 flex items-center justify-center">
                                     <FaWhatsapp size={12} />
                                 </Link>

@@ -102,7 +102,7 @@ const Footer = () => {
             <div className="text-center text-gray-400 font-sans text-xs py-4">
                 © {new Date().getFullYear()} AK Decoration. Developed by {" "}
                 <Link
-                    href="https://sajin-cl.vercel.app"
+                    href={ADMIN_INFO?.devSite}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-primary transition-colors"
