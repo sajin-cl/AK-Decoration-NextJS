@@ -5,6 +5,7 @@ import Footer from "@/components/layouts/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { GoogleAnalytics } from "@next/third-parties/google"
+import Script from "next/script";
 
 
 /* Font List is here */
@@ -37,7 +38,10 @@ export const metadata = {
       ? "https://ak-decoration.vercel.app"
       : "http://localhost:3000"
   ),
-  title: "AK Decoration Service",
+  title: {
+    default: "AK Decoration Service | Kanyakumari",
+    template: "%s | AK Decoration Service",
+  },
   description: `AK Decoration provides professional wedding, birthday, and event decoration services in Kanyakumari district and marthandam surrounding areas. Affordable, creative, and customized designs.`,
   keywords: [
     'event decoration in kanyakumari',
@@ -88,7 +92,7 @@ export const metadata = {
     description:
       "AK Decoration provides professional wedding, birthday, and event decoration services in Kanyakumari district and marthandam surrounding areas. Affordable, creative, and customized designs.",
     url: "/",
-    siteName: "AK Decoration",
+    siteName: "AK Decoration Service",
     type: "website",
     images: [
       {
@@ -123,6 +127,17 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+
+        {/* SEO Schema script added below */}
+
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
+
         <ToastContainer
           position="top-right" autoClose={3000} hideProgressBar={false} closeOnClick
           pauseOnHover draggable theme="light" style={{ top: "80px", }}
@@ -131,4 +146,14 @@ export default function RootLayout({ children }) {
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
     </html>
   );
-} 
+}
+
+/* SEO : Schema.org Person ::: JSON-LD Structured Data*/
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "AK Decoration Service",
+  alternateName: "AK Decoration",
+  url: "https://ak-decoration.vercel.app/",
+};
